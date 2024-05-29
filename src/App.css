@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'kingthings_willowregular';
+  src: url('./assets/fonts/willow/kingthings_willow-webfont.woff2') format('woff2'),
+       url('./assets/fonts/willow/kingthings_willow-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
 .App {
   text-align: center;
 }
@@ -6,6 +16,27 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+
+.title {
+  font-family: 'kingthings_willowregular', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+  color: #4a1a08;
+  }
+
+  .navTitle {
+    font-family: 'kingthings_willowregular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    color: #4a1a08;
+    }
+
+
+    .rounded {
+      border-radius: 10px;
+     size: 20px ;
+    }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -24,9 +55,17 @@
   color: white;
 }
 
+.baseText{
+  color: #4a1a08;
+}
+
+
 .App-link {
   color: #61dafb;
 }
+
+
+
 
 @keyframes App-logo-spin {
   from {

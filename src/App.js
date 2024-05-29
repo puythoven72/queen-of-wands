@@ -1,23 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import HeaderComponent from './components/HeaderComponent';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import ServicesComponent from './components/ServicesComponent';
+import AboutComponent from './components/AboutComponent';
+import ContactComponent from './components/ContactComponent';
+import EventsComponent from './components/EventsComponent';
+import HomeComponent from './components/HomeComponent';
+import Test from './components/Test';
+import { useEffect, useState } from "react";
+import backround from './assets/images/backround.gif'
 function App() {
+ // const [activeLink, setActiveLink] = useState("/home");
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      
+        <Router>
+        <HeaderComponent />
+        <div >
+          <Routes>
+
+            {/* <Route path="/admin" element={<ListItemsComponent />} />
+            <Route path="/admin/add-item" element={<CreateItemComponent />} />
+            <Route path="/admin/edit-item/:id" element={<CreateItemComponent />} />
+            <Route path="/admin/add-images/:id" element={<AddImagesComponent />} /> */}
+
+            {/* <Route path="/" element={<DisplayItemsComponent />} /> */}
+            <Route path="/" element={<HomeComponent />} />
+            <Route path="/home" element={<HomeComponent />} />
+            <Route path="/services" element={<ServicesComponent />} />
+            <Route path="/about" element={<AboutComponent />} />
+            <Route path="/contact" element={<ContactComponent />} />
+            <Route path="/events" element={<EventsComponent />} />
+            
+          </Routes>
+          </div>
+        </Router>
+      
+
+
+
     </div>
   );
 }

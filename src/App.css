@@ -7,6 +7,28 @@
 
 }
 
+@font-face {
+  font-family: 'kaushan_scriptregular';
+  src: url('./assets/fonts/kaushanscript/kaushanscript-regular-webfont.woff2') format('woff2'),
+       url('./assets/fonts/kaushanscript/kaushanscript-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+nav a.active{
+  background-image: url(/src/assets/images/Tinycrown.png);
+  background-repeat: no-repeat;
+ 
+}
+
+nav a.active:hover {
+  cursor: pointer;
+  background-image: url(/src/assets/images/Tinycrown.png);
+}
+
 
 .App {
   text-align: center;
@@ -19,14 +41,14 @@
 
 
 .title {
-  font-family: 'kingthings_willowregular', Arial, sans-serif;
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
   font-weight:normal;
   font-style:normal;
   color: #4a1a08;
   }
 
   .navTitle {
-    font-family: 'kingthings_willowregular', Arial, sans-serif;
+    font-family: 'kaushan_scriptregular', Arial, sans-serif;
     font-weight:normal;
     font-style:normal;
     color: #4a1a08;
@@ -55,17 +77,148 @@
   color: white;
 }
 
-.baseText{
-  color: #4a1a08;
-}
 
 
 .App-link {
   color: #61dafb;
 }
 
+.main {
+
+  background-image: url(/src/assets/images/bkround_crown.png);
+ height: 70vh; 
+   background-position: center;
+  background-repeat: no-repeat;
+    background-size: cover;   
+  /* background-size: auto; */
+  
+}
+
+.splashFontLocation{
+
+ padding-top:  35%;
+  
+}
 
 
+
+
+@media (max-width: 1050px) {    
+  .splashFontLocation{
+    padding-top:  70%;
+  }
+  } 
+
+
+  @media (max-width: 1050px ) and (max-height: 601px) {    
+    .splashFontLocation{
+      padding-top:  28%;
+    }
+    } 
+
+
+  @media (max-width: 1000px) {    
+    .splashFontLocation{
+      padding-top:  90%;
+    }
+    } 
+
+
+
+
+@media (max-width: 900px) {    
+  .splashFontLocation{
+    padding-top:  85%;
+  }
+  } 
+
+
+
+@media (max-width: 800px) {    
+  .splashFontLocation{
+    padding-top:  70%;
+  }
+  } 
+
+
+  @media (max-width: 600px) {    
+    .splashFontLocation{
+      padding-top:  65%;
+    }
+  } 
+  
+
+  @media (max-width: 500px) {    
+    .splashFontLocation{
+      padding-top:  105%;
+    }
+  } 
+
+  @media (max-width: 450px) {    
+    .splashFontLocation{
+      padding-top:  108%;
+    }
+  } 
+
+
+  @media (max-width: 400px) {    
+    .splashFontLocation{
+      padding-top:  105%;
+    }
+  } 
+
+    @media (max-width: 376px) {    
+      .splashFontLocation{
+        padding-top:  85%;
+      }
+    } 
+
+  @media (max-width: 365px) {    
+    .splashFontLocation{
+      padding-top:  100%;
+    }
+  } 
+
+  @media (max-width: 350px) {    
+    .splashFontLocation{
+      padding-top:  125%;
+    }
+  } 
+
+ 
+
+
+
+.splashFont{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  color:white;
+  font-size: xx-large;
+  text-shadow: 0 0 3px #000000, 0 0 7px #000000; 
+  text-decoration: none; 
+}
+
+a.splashFont:hover {
+  cursor: pointer;
+  color: #326f8c;
+}
+
+.test{
+  
+}
+
+.splashTitle{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+      /* 40px/16=2.5em */
+      color: black;
+      font-size: 4rem;
+  text-shadow: 0 0 3px #edac0e, 0 0 7px #326f8c; 
+}
+
+
+.borderTest{
+  border: #4a1a08 solid;
+  
+}
 
 @keyframes App-logo-spin {
   from {

@@ -107,14 +107,16 @@ function ContactComponent() {
                 <Form onSubmit={validateInput} noValidate validated={validated} >
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <span style={{color: "red"}}>*</span>
-                    <Form.Label>Name</Form.Label>
+                        <span style={{ color: "red" }}>*</span>
+                        <Form.Label>Name</Form.Label>
                         <Form.Control type="text"
                             placeholder="Enter Name"
                             required
                             name='from_name'
+                            minLength="3"
+                            maxLength="30"
                         />
-        
+
                         <Form.Control.Feedback type="invalid">
                             Please Enter Your Name.
                         </Form.Control.Feedback>
@@ -125,12 +127,13 @@ function ContactComponent() {
 
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <span style={{color: "red"}}>*</span>
-                    <Form.Label>Email address</Form.Label>
+                        <span style={{ color: "red" }}>*</span>
+                        <Form.Label>Email address</Form.Label>
                         <Form.Control type="email"
-                            placeholder="Enter email"
+                            placeholder="Enter Email"
                             required
                             name='from_email'
+                            maxLength="30"
                         />
                         <Form.Control.Feedback type="invalid">
                             Please Enter Your E-Mail.
@@ -147,7 +150,7 @@ function ContactComponent() {
                         <Row>
                             <Input
                                 className='rounded'
-                                placeholder="Enter phone number"
+                                placeholder="Enter Phone Number (Optional)"
                                 value={value}
                                 onChange={setValue}
                                 name='phone'
@@ -161,11 +164,13 @@ function ContactComponent() {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <span style={{color: "red"}}>*</span>
-                        <Form.Label>Message</Form.Label>
+                        <span style={{ color: "red" }}>*</span>
+                        <Form.Label>Message (200 Characters)</Form.Label>
                         <Form.Control as="textarea" rows={3}
                             required
                             name='message'
+                            maxLength="200"
+                            placeholder="Enter Message"
                         />
                         <Form.Control.Feedback type="invalid">
                             Please Enter Your Message.

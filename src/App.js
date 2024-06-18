@@ -8,9 +8,10 @@ import AboutComponent from './components/AboutComponent';
 import ContactComponent from './components/ContactComponent';
 import EventsComponent from './components/EventsComponent';
 import HomeComponent from './components/HomeComponent';
-import Test from './components/Test';
+
 import { useEffect, useState } from "react";
 import backround from './assets/images/backround.gif'
+import SplashPage from './components/SplashPage';
 function App() {
  // const [activeLink, setActiveLink] = useState("/home");
 
@@ -24,6 +25,7 @@ function App() {
       
       
         <Router>
+        
         <HeaderComponent />
         <div >
           <Routes>
@@ -34,12 +36,13 @@ function App() {
             <Route path="/admin/add-images/:id" element={<AddImagesComponent />} /> */}
 
             {/* <Route path="/" element={<DisplayItemsComponent />} /> */}
-            <Route path="/" element={<HomeComponent />} />
+            <Route path="/" element={<SplashPage />} />
             <Route path="/home" element={<HomeComponent />} />
             <Route path="/services" element={<ServicesComponent />} />
             <Route path="/about" element={<AboutComponent />} />
             <Route path="/contact" element={<ContactComponent />} />
             <Route path="/events" element={<EventsComponent />} />
+           
             
           </Routes>
           </div>

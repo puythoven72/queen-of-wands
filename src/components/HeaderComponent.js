@@ -7,18 +7,18 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { useEffect, useState, Col } from "react";
 import logo from '../assets/images/logo.gif'
 import Image from 'react-bootstrap/Image';
-
 import "../App.css";
 function HeaderComponent(props) {
 
   const [activeLink, setActiveLink] = React.useState("/home");
+  const [selectedImage,setSelctedImage] = React.useState("");
   const navigate = useNavigate();
 
   console.log(activeLink + " IS LNINK");
 
 
   return (
-    <Navbar expand="lg" style={{ backgroundColor: "#4a1a08" }}>
+    <Navbar expand="lg" style={{ backgroundColor: "#78c0de" }}>
       <Container fluid style={{ backgroundColor: "#eec986" }} >
 
 
@@ -32,35 +32,50 @@ function HeaderComponent(props) {
         <Navbar.Collapse id="basic-navbar-nav">
 
 
-
-
           <Nav defaultActiveKey={activeLink}
             className="me-auto mb-2 navTitle"
-            variant="underline"
-            onSelect={(selectedKey, event) => {
-              event.preventDefault();
-              console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
-              setActiveLink(selectedKey);
-              navigate(selectedKey);
-            }}>
+           // variant="underline"
+          
+             onSelect={(selectedKey, event) => {
+               event.preventDefault();
+               console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
+               setActiveLink(selectedKey);
+               navigate(selectedKey);
+               
+             }}
+            >
             <Nav.Item>
-              <Nav.Link href="/home" eventKey="/home">Home</Nav.Link>
+              <Nav.Link 
+              href="/home" eventKey="/home"
+              className={({ isActive }) => (isActive ? 'active' : null)}
+              >
+                Home
+             
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/services" eventKey="/services">Services</Nav.Link>
+              <Nav.Link href="/services" eventKey="/services"
+               className={({ isActive }) => (isActive ? 'active' : null)}
+              >Services</Nav.Link>
 
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/about" eventKey="/about">About</Nav.Link>
+              <Nav.Link href="/about" eventKey="/about"
+               className={({ isActive }) => (isActive ? 'active' : null)}
+              >About</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/contact" eventKey="/contact">Contact</Nav.Link>
+              <Nav.Link href="/contact" eventKey="/contact"
+               className={({ isActive }) => (isActive ? 'active' : null)}
+              >Contact</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/events" eventKey="/events">Events</Nav.Link>
+              <Nav.Link href="/events" eventKey="/events"
+               className={({ isActive }) => (isActive ? 'active' : null)}
+              >Events</Nav.Link>
             </Nav.Item>
 
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -70,7 +85,7 @@ function HeaderComponent(props) {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
 
 

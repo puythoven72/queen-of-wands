@@ -4,48 +4,52 @@ import tarotAnimated from '../assets/images/tarotAnimated.gif'
 import Carousel from 'react-bootstrap/Carousel';
 import { Row, Col, Button, Card } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
-
+import mediumCrown from "../assets/images/bkround_crown.png";
+import '../App.css';
+import { NavLink, Link } from "react-router-dom";
 
 
 function SplashPage() {
 
 
     return (
-        <Container >
-             <Row  className="d-flex align-items-center justify-content-center text-center">
-            <Carousel>
-               
-                    
-                <Carousel.Item>
+        <Container className="">
 
-                    <Image src={Splash} thumbnail style={{ width: '50rem' }} />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                
-                
-                <Carousel.Item>
-
-                <Image src={Splash} thumbnail style={{ width: '50rem' }} />
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                <Image src={Splash} thumbnail style={{ width: '50rem' }} />
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <Row className="mt-5">
+                <Col className="">
+                    <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center">
+                        Queen Of Wands Tarot Advising
+                    </h1>
+                </Col>
             </Row>
+
+            <Row className="     main    " >
+                <Col className=" splashFontLocation" >
+
+                    <Row  className="">
+                        <Col className="d-flex align-items-center justify-content-center text-center">
+                            <Link to="/services" className="splashFont">Services</Link>
+
+
+                        </Col>
+                    </Row  >
+                    <Row  className="d-flex align-items-center justify-content-center text-center">
+                        <Col className="  ">
+                            <Link to="/events" className="splashFont">Events</Link>
+                        </Col>
+                    </Row>
+                    <Row >
+                        <Col className=" d-flex align-items-center justify-content-center text-center">
+                            <Link to="/contact" className="splashFont">Contact</Link>
+                        </Col>
+                    </Row>
+
+                </Col>
+
+            </Row>
+
+
+
         </Container>
 
     );

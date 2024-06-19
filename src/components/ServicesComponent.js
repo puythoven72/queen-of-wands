@@ -3,12 +3,7 @@ import Cards from './MultipleFlipCards';
 function ServicesComponent(){
 
 return(
-
-
    <Cards/>
-
-
-
 ) ;
 
 }

@@ -102,9 +102,9 @@ function ContactComponent() {
 
 
     return (
-        < Container style={{ backgroundColor: '#eec986' }} className="mt-5  d-flex align-items-center justify-content-center text-center" >
-            <Row>
-                <Form onSubmit={validateInput} noValidate validated={validated} >
+        < Container  className="mt-5  d-flex align-items-center justify-content-center text-center crownBkRound" >
+            <Row >
+                <Form onSubmit={validateInput} noValidate validated={validated}  className="mt-1">
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <span style={{ color: "red" }}>*</span>
@@ -170,7 +170,7 @@ function ContactComponent() {
                             required
                             name='message'
                             maxLength="200"
-                            placeholder="Enter Message"
+                            placeholder="Please include details about services you are interested in."
                         />
                         <Form.Control.Feedback type="invalid">
                             Please Enter Your Message.

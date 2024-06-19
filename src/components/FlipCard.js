@@ -12,7 +12,7 @@ const FlipCard = ({ imageUrl, name, description }) => {
   };
 
   return (
-    <div className="car-card" >
+    <div className="car-card " >
 
 
       <ReactCardFlip
@@ -22,13 +22,18 @@ const FlipCard = ({ imageUrl, name, description }) => {
       >
         {/* Front side */}
         <div
-          className="card-front"
+          className="card-front d-flex align-items-center justify-content-center text-center"
           onClick={handleClick}
           style={{
             cursor: "pointer"
           }}
         >
-          <Image src={tarotback}  />
+         <div className="d-flex align-items-center justify-content-center text-center ">
+         <h2>{name}</h2>
+         </div>
+              
+           
+          {/* <Image src={tarotback}  /> */}
         </div>
         {/* Back side */}
 

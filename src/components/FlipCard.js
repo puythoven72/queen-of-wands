@@ -28,11 +28,11 @@ const FlipCard = ({ imageUrl, name, description }) => {
             cursor: "pointer"
           }}
         >
-         <div className="d-flex align-items-center justify-content-center text-center ">
-         <h2>{name}</h2>
-         </div>
-              
-           
+          <div className="d-flex align-items-center justify-content-center text-center ">
+            <h2>{name}</h2>
+          </div>
+
+
           {/* <Image src={tarotback}  /> */}
         </div>
         {/* Back side */}
@@ -40,9 +40,14 @@ const FlipCard = ({ imageUrl, name, description }) => {
 
         <div className="card-back " onClick={handleClick}>
           <div>
-            <h2>{name}</h2>
+            <p
+            ><h2>
+                {name}
+              </h2>
+              <hr></hr>
+            </p>
 
-            <p>{description}</p>
+            <div dangerouslySetInnerHTML={{ __html: description }} />
 
           </div>
 

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'kaushan_scriptregular';
+  src: url('../assets/fonts/kaushanscript/kaushanscript-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/kaushanscript/kaushanscript-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
 .car-container {
     display: flex;
     justify-content: center;
@@ -19,6 +29,7 @@
   }
 
   .card-front{
+    font-family: 'kaushan_scriptregular', Arial, sans-serif;
     background-image: url(/src/assets/images/tarotBack.png);
     background-size: cover;
     height: 50vh; 
@@ -30,7 +41,7 @@
     color: #fff;
   }
   .card-back {
-
+    font-family: 'kaushan_scriptregular', Arial, sans-serif;
     display: flex; 
   
     overflow-y: auto;
@@ -43,13 +54,16 @@
     /* justify-content: center;
     align-items: center; */
     color: #333;
-    background-color: #fff;
+    background-color: #eec986;
     /* border: 1px solid #ccc; */
     border-radius: 10px;
     height: 50vh; 
     width: 30vh;
+    padding: 10px;
    
     
+    background-image: linear-gradient(to bottom, rgba(238, 201, 134, 1) 0%, rgba(238, 201, 134, 1) 100%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-clip: content-box, padding-box;
   }
    .car-card img {
     max-width: 100%;
@@ -67,5 +81,9 @@
     justify-content: center;
     /* border: 1px solid #ccc; */
     margin-bottom: 5px;
+    }
+
+    .card-back {
+      padding: 5px;
     }
   }

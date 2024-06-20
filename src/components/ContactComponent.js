@@ -165,12 +165,12 @@ function ContactComponent() {
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <span style={{ color: "red" }}>*</span>
-                        <Form.Label>Message (200 Characters)</Form.Label>
+                        <Form.Label>Message (200 Characters) Please include details about services you are interested in.</Form.Label>
                         <Form.Control as="textarea" rows={3}
                             required
                             name='message'
                             maxLength="200"
-                            placeholder="Please include details about services you are interested in."
+                            placeholder="Enter Message"
                         />
                         <Form.Control.Feedback type="invalid">
                             Please Enter Your Message.

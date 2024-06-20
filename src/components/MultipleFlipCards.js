@@ -3,23 +3,28 @@ import './cardStyle.css';
 import FlipCard from "./FlipCard";
 import tarotback from "../assets/images/tarotBack.png"
 import { Container, Row, Col } from 'react-bootstrap';
+import StringUtility from './utility/StringUtility';
 
 
-const cars = [
+
+
+
+const cards = [
+  
   {
     imageUrl: "../assets/images/tarotBack.png",
-    name: "Service 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum .",
+    name: StringUtility.SERVICE1,
+    description: StringUtility.SERVICE1_DESCRIPTION,
   },
   {
     imageUrl: "../assets/images/tarotBack.png",
-    name: "Service 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    name: StringUtility.SERVICE2,
+    description: StringUtility.SERVICE2_DESCRIPTION,
   },
   {
     imageUrl: "../assets/images/tarotBack.png",
-    name: "Service 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    name: StringUtility.SERVICE3,
+    description: StringUtility.SERVICE3_DESCRIPTION,
   },
 ];
 
@@ -29,14 +34,14 @@ function MultipleFlipCards() {
 
     <Container >
       <Row className='mt-5 ' >
-        {cars.map((car, index) => (
+        {cards.map((cards, index) => (
 
           <Col className=' d-flex align-items-center justify-content-center text-center'>
             <FlipCard
               key={index}
-              imageUrl={car.imageUrl}
-              name={car.name}
-              description={car.description}
+              imageUrl={cards.imageUrl}
+              name={cards.name}
+              description={cards.description}
             />
 
           </Col>

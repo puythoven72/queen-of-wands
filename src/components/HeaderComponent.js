@@ -11,7 +11,7 @@ import "../App.css";
 function HeaderComponent(props) {
 
   const [activeLink, setActiveLink] = React.useState("/home");
-  const [selectedImage,setSelctedImage] = React.useState("");
+  const [selectedImage, setSelctedImage] = React.useState("");
   const navigate = useNavigate();
 
   console.log(activeLink + " IS LNINK");
@@ -34,44 +34,52 @@ function HeaderComponent(props) {
 
           <Nav defaultActiveKey={activeLink}
             className="me-auto mb-2 navTitle"
-           // variant="underline"
-          
-             onSelect={(selectedKey, event) => {
-               event.preventDefault();
-               console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
-               setActiveLink(selectedKey);
-               navigate(selectedKey);
-               
-             }}
-            >
+            // variant="underline"
+
+            onSelect={(selectedKey, event) => {
+              event.preventDefault();
+              console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
+              setActiveLink(selectedKey);
+              navigate(selectedKey);
+              document.getElementById("eventsLink").classList.remove('active'); 
+        document.getElementById("contactLink").classList.remove('active');
+        document.getElementById("serviceLink").classList.remove('active');
+
+            }}
+          >
             <Nav.Item>
-              <Nav.Link 
-              href="/home" eventKey="/home"
-              className={({ isActive }) => (isActive ? 'active' : null)}
+              <Nav.Link
+                href="/home" eventKey="/home"
+                className={({ isActive }) => (isActive ? 'active' : null)}
+                id="homeLink"
               >
                 Home
-             
+
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/services" eventKey="/services"
-               className={({ isActive }) => (isActive ? 'active' : null)}
+                className={({ isActive }) => (isActive ? 'active' : null)}
+                id="serviceLink"
               >Services</Nav.Link>
 
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/about" eventKey="/about"
-               className={({ isActive }) => (isActive ? 'active' : null)}
+                className={({ isActive }) => (isActive ? 'active' : null)}
+                id="aboutLink"
               >About</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/contact" eventKey="/contact"
-               className={({ isActive }) => (isActive ? 'active' : null)}
+                className={({ isActive }) => (isActive ? 'active' : null)}
+                id="contactLink"
               >Contact</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/events" eventKey="/events"
-               className={({ isActive }) => (isActive ? 'active' : null)}
+                className={({ isActive }) => (isActive ? 'active' : null)}
+                id="eventsLink"
               >Events</Nav.Link>
             </Nav.Item>
 

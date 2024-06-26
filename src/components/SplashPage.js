@@ -10,7 +10,13 @@ import { NavLink, Link } from "react-router-dom";
 
 
 function SplashPage() {
+    function updateNav(e,navItem) {
+        document.getElementById("homeLink").classList.remove('active');
+        
 
+        document.getElementById(navItem).classList.add('active');
+
+    };
 
     return (
         <Container className="">
@@ -26,21 +32,21 @@ function SplashPage() {
             <Row className="     main    " >
                 <Col className=" splashFontLocation" >
 
-                    <Row  className="">
+                    <Row className="">
                         <Col className="d-flex align-items-center justify-content-center text-center">
-                            <Link to="/services" className="splashFont">Services</Link>
+                            <Link to="/services" className="splashFont" onClick={event=>updateNav(event,"serviceLink")}>Services</Link>
 
 
                         </Col>
                     </Row  >
-                    <Row  className="d-flex align-items-center justify-content-center text-center">
+                    <Row className="d-flex align-items-center justify-content-center text-center">
                         <Col className="  ">
-                            <Link to="/events" className="splashFont">Events</Link>
+                            <Link to="/events" className="splashFont" onClick={event=>updateNav(event,"eventsLink")}>Events</Link>
                         </Col>
                     </Row>
                     <Row >
                         <Col className=" d-flex align-items-center justify-content-center text-center">
-                            <Link to="/contact" className="splashFont">Contact</Link>
+                            <Link to="/contact" className="splashFont" onClick={event=>updateNav(event,"contactLink")}>Contact</Link>
                         </Col>
                     </Row>
 

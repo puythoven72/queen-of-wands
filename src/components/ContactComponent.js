@@ -70,139 +70,122 @@ function ContactComponent() {
         }
     };
 
-
-    // const validateInput = (e) => {
-    //     e.preventDefault();
-    //     let name = e.target.from_name.value;
-    //     console.log(name + " IS NAME");
-    //     let email = e.target.from_email.value;
-    //     console.log(email + " IS email");
-
-    //     let phone = e.target.phone.value;
-    //     console.log(phone + " IS phone");
-
-    //     let message = e.target.message.value;
-    //     console.log(message + " IS text area");
-
-    //     // setName(e.target.fname.value);
-    //     // setEmail(e.target.femail.value);
-
-    //     console.log(name)
-    //     // props.addContact(name, email);
-    //     handleOnSubmit(e);
-    // }
-
-
-
-
-
-
-
-
-
-
     return (
-        < Container  className="mt-5  d-flex align-items-center justify-content-center text-center crownBkRound" >
-            <Row >
-                <Form onSubmit={validateInput} noValidate validated={validated}  className="mt-1">
+        <>
+            <Container>
+                <Row className="mt-5  d-flex align-items-center justify-content-center text-center">
+                    <Col className="">
+                        <h1 className="splashTitle ">
+                            Contact Queen Of Wands
+                        </h1>
+                    </Col>
+                </Row>
+            </Container>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <span style={{ color: "red" }}>*</span>
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type="text"
-                            placeholder="Enter Name"
-                            required
-                            name='from_name'
-                            minLength="3"
-                            maxLength="30"
-                        />
-
-                        <Form.Control.Feedback type="invalid">
-                            Please Enter Your Name.
-                        </Form.Control.Feedback>
-                        <Form.Text className="text-muted">
-                        </Form.Text>
-                    </Form.Group>
+            < Container className="mt-5  d-flex align-items-center justify-content-center text-center crownBkRound" >
 
 
+                <Row>
+                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 ">
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <span style={{ color: "red" }}>*</span>
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email"
-                            placeholder="Enter Email"
-                            required
-                            name='from_email'
-                            maxLength="30"
-                        />
-                        <Form.Control.Feedback type="invalid">
-                            Please Enter Your E-Mail.
-                        </Form.Control.Feedback>
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
-                    </Form.Group>
-
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>
-                            Phone Number
-                        </Form.Label>
-                        <Row>
-                            <Input
-                                className='rounded'
-                                placeholder="Enter Phone Number (Optional)"
-                                value={value}
-                                onChange={setValue}
-                                name='phone'
-                                country="US"
-                                maxLength="14"
-                                minLength="14"
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <span style={{ color: "red" }}>*</span>
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control type="text"
+                                placeholder="Enter Name"
+                                required
+                                name='from_name'
+                                minLength="3"
+                                maxLength="30"
                             />
 
+                            <Form.Control.Feedback type="invalid">
+                                Please Enter Your Name.
+                            </Form.Control.Feedback>
+                            <Form.Text className="text-muted">
+                            </Form.Text>
+                        </Form.Group>
+
+
+
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <span style={{ color: "red" }}>*</span>
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email"
+                                placeholder="Enter Email"
+                                required
+                                name='from_email'
+                                maxLength="30"
+                            />
+                            <Form.Control.Feedback type="invalid">
+                                Please Enter Your E-Mail.
+                            </Form.Control.Feedback>
+                            <Form.Text className="text-muted">
+                                We'll never share your email with anyone else.
+                            </Form.Text>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>
+                                Phone Number
+                            </Form.Label>
+                            <Row>
+                                <Input
+                                    className='rounded'
+                                    placeholder="Enter Phone Number (Optional)"
+                                    value={value}
+                                    onChange={setValue}
+                                    name='phone'
+                                    country="US"
+                                    maxLength="14"
+                                    minLength="14"
+                                />
+
+                            </Row>
+
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <span style={{ color: "red" }}>*</span>
+                            <Form.Label>Message (200 Characters) Please include details about services you are interested in.</Form.Label>
+                            <Form.Control as="textarea" rows={3}
+                                required
+                                name='message'
+                                maxLength="200"
+                                placeholder="Enter Message"
+                            />
+                            <Form.Control.Feedback type="invalid">
+                                Please Enter Your Message.
+                            </Form.Control.Feedback>
+                        </Form.Group>
+
+
+
+
+
+
+                        <Button variant="primary" type="submit" className="mb-5" >
+                            Submit
+                        </Button>
+                        <Row className="mt-2 baseText">
+                            <Col>
+
+                                <Mailto email="jensVarrage@gmail.com" subject="Subject" body={"Hello, Im interested in the "} >
+                                    <span className="" style={{ textDecoration: "none" }}>  Interested? Mail me!</span>
+                                </Mailto>
+                            </Col>
                         </Row>
+                    </Form>
 
-                    </Form.Group>
-
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <span style={{ color: "red" }}>*</span>
-                        <Form.Label>Message (200 Characters) Please include details about services you are interested in.</Form.Label>
-                        <Form.Control as="textarea" rows={3}
-                            required
-                            name='message'
-                            maxLength="200"
-                            placeholder="Enter Message"
-                        />
-                        <Form.Control.Feedback type="invalid">
-                            Please Enter Your Message.
-                        </Form.Control.Feedback>
-                    </Form.Group>
+                </Row>
 
 
 
 
 
 
-                    <Button variant="primary" type="submit" className="mb-5" >
-                        Submit
-                    </Button>
-                    <Row className="mt-2 baseText">
-                        <Col>
-
-                            <Mailto email="jensVarrage@gmail.com" subject="Subject" body={"Hello, Im interested in the "} >
-                                <span className="" style={{ textDecoration: "none" }}>  Interested? Mail me!</span>
-                            </Mailto>
-                        </Col>
-                    </Row>
-                </Form>
-
-            </Row>
-
-
-
-
-
-
-        </Container>
+            </Container>
+        </>
     );
 
 }

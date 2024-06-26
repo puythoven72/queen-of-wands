@@ -16,6 +16,14 @@
 
 }
 
+.baseText{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  color:white;
+font-weight: bold;
+  text-decoration: none; 
+}
+
+
 
 
 nav a.active{
@@ -112,6 +120,31 @@ font-weight: bold;
  padding-top:  35%;
   
 }
+.splashFont{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  color:white;
+  font-size: xx-large;
+  text-shadow: 0 0 3px #000000, 0 0 7px #000000; 
+  text-decoration: none; 
+}
+
+
+a.splashFont:hover {
+  cursor: pointer;
+  color: #326f8c;
+}
+
+.test{
+  
+}
+
+.splashTitle{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+      /* 40px/16=2.5em */
+      color: black;
+      font-size: 4rem;
+  text-shadow: 0 0 3px #edac0e, 0 0 7px #326f8c; 
+}
 
 
 
@@ -143,6 +176,13 @@ font-weight: bold;
   .splashFontLocation{
     padding-top:  85%;
   }
+
+  
+  .splashTitle{
+    
+    font-size: 3rem;
+
+}
   } 
 
 
@@ -151,6 +191,7 @@ font-weight: bold;
   .splashFontLocation{
     padding-top:  70%;
   }
+
   } 
 
 
@@ -202,30 +243,8 @@ font-weight: bold;
 
 
 
-.splashFont{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
-  color:white;
-  font-size: xx-large;
-  text-shadow: 0 0 3px #000000, 0 0 7px #000000; 
-  text-decoration: none; 
-}
 
-a.splashFont:hover {
-  cursor: pointer;
-  color: #326f8c;
-}
 
-.test{
-  
-}
-
-.splashTitle{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
-      /* 40px/16=2.5em */
-      color: black;
-      font-size: 4rem;
-  text-shadow: 0 0 3px #edac0e, 0 0 7px #326f8c; 
-}
 
 
 .borderTest{

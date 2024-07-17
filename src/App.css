@@ -68,6 +68,13 @@ nav a.active:hover {
      size: 20px ;
     }
 
+    .footer{
+      position:relative;
+      left:0;
+      bottom:0;
+      right:0;
+    }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

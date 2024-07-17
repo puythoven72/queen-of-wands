@@ -12,7 +12,7 @@ const FlipCard = ({ imageUrl, name, description }) => {
   };
 
   return (
-    <div className="car-card " >
+    <div className="car-card  " >
 
 
       <ReactCardFlip
@@ -22,7 +22,7 @@ const FlipCard = ({ imageUrl, name, description }) => {
       >
         {/* Front side */}
         <div
-          className="card-front d-flex align-items-center justify-content-center text-center"
+          className="card-front d-flex align-items-center justify-content-center text-center "
           onClick={handleClick}
           style={{
             cursor: "pointer"
@@ -38,20 +38,17 @@ const FlipCard = ({ imageUrl, name, description }) => {
         {/* Back side */}
 
 
-        <div className="card-back " onClick={handleClick}>
+        <div className="card-back" onClick={handleClick}>
           <div>
-            <p
-            ><h2>
+            <p>
+              <h2 className="cardTitle d-flex align-items-center justify-content-center text-center">
                 {name}
+                
               </h2>
               <hr></hr>
             </p>
-
-            <div dangerouslySetInnerHTML={{ __html: description }} />
-
+            <div className="p-1" dangerouslySetInnerHTML={{ __html: description }} />
           </div>
-
-
         </div>
       </ReactCardFlip>
 

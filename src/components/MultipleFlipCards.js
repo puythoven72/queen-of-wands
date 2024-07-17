@@ -32,11 +32,11 @@ function MultipleFlipCards() {
   return (
 
 
-    <Container >
+    <Container>
       <Row className='mt-5 ' >
         {cards.map((cards, index) => (
 
-          <Col className=' d-flex align-items-center justify-content-center text-center'>
+          <Col className=' d-flex align-items-center justify-content-center'>
             <FlipCard
               key={index}
               imageUrl={cards.imageUrl}

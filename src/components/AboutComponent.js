@@ -1,54 +1,54 @@
-
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
-import Splash from '../assets/images/tarotSplash.jpg'
+
 import StringUtility from './utility/StringUtility';
 import "./cardStyle.css";
 import about from "../assets/images/about.jpg"
 function AboutComponent() {
+
+    const picShadow = {
+        
+        
+        shadowColor: "black",
+        shadowOffset: { height: 2},
+        shadowOpacity: 0.3,
+
+
+      };
+
     return (
-        <>
-            {/* <Container className="baseText">
-               
-            </Container> */}
-
-            < Container >
-
-                <Row className="mt-5">
-                    <Col className="">
-                        <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center">
-                            Queen Of Wands Tarot Advising
-                        </h1>
-                    </Col>
-                </Row>
-                <Row className="mt-5 d-flex align-items-center justify-content-center text-center " style={{backgroundColor:'#eec986'}} >
 
 
-                    <Col className="mt-2">
-                        <h3 className="title">About</h3>
-                    </Col>
-                </Row>
+        <Container className="">
 
-                <Row className="p-4 d-flex align-items-center justify-content-center text-center " style={{backgroundColor:'#eec986'}}  >
-                    <Col className="">
+            <Row className="mt-5">
+                <Col className="">
+                    <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center">
+                        Queen Of Wands Tarot Advising
+                    </h1>
+                </Col>
+            </Row>
+            <Row className="text-center">
+                <Col className="mt-2" style={{ backgroundColor: '#eec986', borderRadius: '5px'}}>
+                    <h3 className="title">About</h3>
+                </Col>
+            </Row>
+            <Row >
+                <Col className="text-center  p-3 "  sm={1} lg={6} style={{ backgroundColor: '#eec986' ,borderRadius: '5px'}}>
+                    <Image src={about} roundedCircle
+                        width="75%"
+                        // style={picShadow}
+                        className="box"
+                    />
+                </Col>
 
-                        <Image  fluid rounded src={about} />
 
+                <Col className="text-center p-3 d-flex align-items-center aboutText" style={{ backgroundColor: '#eec986' }}>
+                    <p >{StringUtility.ABOUT}</p>
+                </Col>
 
-                    </Col>
-                    <Col className="d-flex align-items-center justify-content-center text-center ">
-                        <p >{StringUtility.ABOUT}
-                        </p>
-                    </Col>
-                </Row>
-
-
-
-
-
-            </Container>
-
-        </>
+            </Row>
+        </Container>
 
     );
 }

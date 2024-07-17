@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import Splash from '../assets/images/tarotSplash.jpg'
+
 import tarotAnimated from '../assets/images/tarotAnimated.gif'
 import Carousel from 'react-bootstrap/Carousel';
 import { Row, Col, Button, Card } from "react-bootstrap";

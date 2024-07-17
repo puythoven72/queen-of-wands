@@ -14,8 +14,9 @@
     flex-wrap: wrap;
     gap: 20px;
   }
+  
   .car-card {
-    width: 300px;
+    width: 400px;
     height: 100%;
     display: flex;
      /* align-items: center; 
@@ -39,9 +40,15 @@
   background-repeat: no-repeat;
     background-size: cover;   
     color: #fff;
+    text-shadow: 0 0 3px #000, 0 0 7px #000; 
   }
-  .card-back {
+
+  .cardTitle{
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
+    text-shadow: 0 0 3px #326f8c, 0 0 7px #edac0e; 
+  } 
+  .card-back {
+    /* font-family: 'kaushan_scriptregular', Arial, sans-serif; */
     display: flex; 
   
     overflow-y: auto;
@@ -69,6 +76,23 @@
   } 
 .borderTest{
   border: white, solid;
+}
+
+.aboutText{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  font-size: large;
+}
+
+.box {
+  border-radius: 10px;
+  margin-top: 1rem;
+  /* width: 50%;
+  height: 150px;
+  padding: 10px 10px 10px 10px; */
+  background-color: #f5f5f5;
+  border: 1px solid #000;
+  /* Box Shadow */
+  box-shadow: 1px 1px 10px 0px #326f8c;
 }
 
   @media(max-width:800px) {

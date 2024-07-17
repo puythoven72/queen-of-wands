@@ -8,17 +8,11 @@ import AboutComponent from './components/AboutComponent';
 import ContactComponent from './components/ContactComponent';
 import EventsComponent from './components/EventsComponent';
 import HomeComponent from './components/HomeComponent';
-
 import { useEffect, useState } from "react";
 import backround from './assets/images/backround.gif'
 import SplashPage from './components/SplashPage';
+import Footer from './components/Footer';
 function App() {
- // const [activeLink, setActiveLink] = useState("/home");
-
-
-
-
-
 
   return (
     <div>
@@ -46,6 +40,7 @@ function App() {
             
           </Routes>
           </div>
+         
         </Router>
       
 

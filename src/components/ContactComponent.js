@@ -82,13 +82,13 @@ function ContactComponent() {
                 </Row>
             </Container>
 
-            < Container className="mt-5  d-flex align-items-center justify-content-center text-center crownBkRound" >
+            < Container className="mt-5 p-2 d-flex align-items-center justify-content-center text-center " >
 
 
-                <Row>
-                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 ">
+                <Row  >
+                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1"  style= {{backgroundColor:'#eec986'}}>
 
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="m-3" controlId="formBasicEmail">
                             <span style={{ color: "red" }}>*</span>
                             <Form.Label>Name</Form.Label>
                             <Form.Control type="text"
@@ -167,14 +167,14 @@ function ContactComponent() {
                         <Button variant="primary" type="submit" className="mb-5" >
                             Submit
                         </Button>
-                        <Row className="mt-2 baseText">
+                        {/* <Row className="mt-2 baseText">
                             <Col>
 
                                 <Mailto email="jensVarrage@gmail.com" subject="Subject" body={"Hello, Im interested in the "} >
                                     <span className="" style={{ textDecoration: "none" }}>  Interested? Mail me!</span>
                                 </Mailto>
                             </Col>
-                        </Row>
+                        </Row> */}
                     </Form>
 
                 </Row>

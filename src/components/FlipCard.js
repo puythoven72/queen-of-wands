@@ -12,17 +12,15 @@ const FlipCard = ({ imageUrl, name, description }) => {
   };
 
   return (
-    <div className="car-card  " >
-
-
+    <div className="car-card" >
       <ReactCardFlip
         isFlipped={isFlipped}
         flipDirection="vertical"
-
+      
       >
         {/* Front side */}
         <div
-          className="card-front d-flex align-items-center justify-content-center text-center "
+          className="card-front d-flex align-items-center justify-content-center text-center card-border"
           onClick={handleClick}
           style={{
             cursor: "pointer"
@@ -35,10 +33,9 @@ const FlipCard = ({ imageUrl, name, description }) => {
 
           {/* <Image src={tarotback}  /> */}
         </div>
+
         {/* Back side */}
-
-
-        <div className="card-back" onClick={handleClick}>
+        <div className="card-back card-border" onClick={handleClick}>
           <div>
             <p>
               <h2 className="cardTitle d-flex align-items-center justify-content-center text-center">

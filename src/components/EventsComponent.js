@@ -5,7 +5,7 @@ function EventsComponent() {
 
 
     return (
-        <Container className="">
+        <Container className="p-3">
 
             <Row className="mt-5">
                 <Col className="">

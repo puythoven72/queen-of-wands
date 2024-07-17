@@ -4,7 +4,7 @@ import Input from 'react-phone-number-input/input'
 import Form from 'react-bootstrap/Form';
 import '../App.js';
 import emailjs from 'emailjs-com';
-
+import "../App.css";
 import InputGroup from 'react-bootstrap/InputGroup';
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -86,11 +86,11 @@ function ContactComponent() {
 
 
                 <Row  >
-                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1"  style= {{backgroundColor:'#eec986'}}>
+                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1"  style= {{backgroundColor:'#eec986',  borderRadius: '5px'}}>
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label>Name</Form.Label>
+                            <Form.Label className="title">Name</Form.Label>
                             <Form.Control type="text"
                                 placeholder="Enter Name"
                                 required
@@ -108,9 +108,9 @@ function ContactComponent() {
 
 
 
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="m-3" controlId="formBasicEmail">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label className="title">Email address</Form.Label>
                             <Form.Control type="email"
                                 placeholder="Enter Email"
                                 required
@@ -125,8 +125,8 @@ function ContactComponent() {
                             </Form.Text>
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>
+                        <Form.Group className="m-3" controlId="formBasicEmail">
+                            <Form.Label className="title">
                                 Phone Number
                             </Form.Label>
                             <Row>
@@ -145,9 +145,9 @@ function ContactComponent() {
 
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                        <Form.Group className="m-3" controlId="exampleForm.ControlTextarea1">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label>Message (200 Characters) Please include details about services you are interested in.</Form.Label>
+                            <Form.Label className="title">Message (200 Characters) Please include details about services you are interested in.</Form.Label>
                             <Form.Control as="textarea" rows={3}
                                 required
                                 name='message'

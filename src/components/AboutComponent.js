@@ -6,23 +6,14 @@ import "./cardStyle.css";
 import about from "../assets/images/about.jpg"
 function AboutComponent() {
 
-    const picShadow = {
-        
-        
-        shadowColor: "black",
-        shadowOffset: { height: 2},
-        shadowOpacity: 0.3,
-
-
-      };
 
     return (
 
 
-        <Container className="">
+        <Container >
 
             <Row className="mt-5">
-                <Col className="">
+                <Col >
                     <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center">
                         Queen Of Wands Tarot Advising
                     </h1>
@@ -37,7 +28,6 @@ function AboutComponent() {
                 <Col className="text-center  p-3 "  sm={1} lg={6} style={{ backgroundColor: '#eec986' ,borderRadius: '5px'}}>
                     <Image src={about} roundedCircle
                         width="75%"
-                        // style={picShadow}
                         className="box"
                     />
                 </Col>

@@ -49,6 +49,11 @@ function SplashPage() {
                             <Link to="/contact" className="splashFont" onClick={event=>updateNav(event,"contactLink")}>Contact</Link>
                         </Col>
                     </Row>
+                    {/* <Row >
+                        <Col className=" d-flex align-items-center justify-content-center text-center">
+                            <Link to="/about" className="splashFont" onClick={event=>updateNav(event,"contactLink")}>About</Link>
+                        </Col>
+                    </Row>  */}
 
                 </Col>
 

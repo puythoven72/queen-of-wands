@@ -1,7 +1,6 @@
 
 import './cardStyle.css';
 import FlipCard from "./FlipCard";
-import tarotback from "../assets/images/tarotBack.png"
 import { Container, Row, Col } from 'react-bootstrap';
 import StringUtility from './utility/StringUtility';
 

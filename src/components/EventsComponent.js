@@ -1,4 +1,4 @@
-import { Row, Col, Button, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
 import currentEvent from "../assets/images/currentEvent.png";
 function EventsComponent() {

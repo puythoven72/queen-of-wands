@@ -1,12 +1,7 @@
 import Container from "react-bootstrap/Container";
-
-import tarotAnimated from '../assets/images/tarotAnimated.gif'
-import Carousel from 'react-bootstrap/Carousel';
-import { Row, Col, Button, Card } from "react-bootstrap";
-import Image from 'react-bootstrap/Image';
-import mediumCrown from "../assets/images/bkround_crown.png";
+import { Row, Col } from "react-bootstrap";
 import '../App.css';
-import { NavLink, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 
 function SplashPage() {

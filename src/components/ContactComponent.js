@@ -1,11 +1,11 @@
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Input from 'react-phone-number-input/input'
 import Form from 'react-bootstrap/Form';
 import '../App.js';
 import emailjs from 'emailjs-com';
 import "../App.css";
-import InputGroup from 'react-bootstrap/InputGroup';
+
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;

@@ -3,15 +3,12 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { useEffect, useState, Col } from "react";
 import logo from '../assets/images/logo.gif'
 import Image from 'react-bootstrap/Image';
 import "../App.css";
 function HeaderComponent(props) {
 
   const [activeLink, setActiveLink] = React.useState("/home");
-  const [selectedImage, setSelctedImage] = React.useState("");
   const navigate = useNavigate();
 
   console.log(activeLink + " IS LNINK");

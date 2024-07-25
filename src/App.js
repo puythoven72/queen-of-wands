@@ -30,7 +30,7 @@ function App() {
             <Route path="/admin/add-images/:id" element={<AddImagesComponent />} /> */}
 
             {/* <Route path="/" element={<DisplayItemsComponent />} /> */}
-            <Route path="/" element={<SplashPage />} />
+            <Route path="/" element={<HomeComponent />} />
             <Route path="/home" element={<HomeComponent />} />
             <Route path="/services" element={<ServicesComponent />} />
             <Route path="/about" element={<AboutComponent />} />
@@ -42,7 +42,7 @@ function App() {
           </div>
          
         </Router>
-      
+      {/* <Footer/> */}
 
 
 

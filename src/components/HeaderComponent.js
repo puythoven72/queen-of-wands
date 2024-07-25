@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image';
 import "../App.css";
 function HeaderComponent(props) {
 
-  const [activeLink, setActiveLink] = React.useState("/home");
+  const [activeLink, setActiveLink] = React.useState("/");
   const navigate = useNavigate();
 
   console.log(activeLink + " IS LNINK");

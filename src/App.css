@@ -69,10 +69,11 @@ nav a.active:hover {
     }
 
     .footer{
-      position:relative;
+      position:absolute;
       left:0;
       bottom:0;
       right:0;
+      background-color: #eec986; 
     }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -98,15 +99,27 @@ nav a.active:hover {
   color: #61dafb;
 }
 
-.main {
+/* .main {
 
   background-image: url(/src/assets/images/bkround_crown.png);
  height: 70vh; 
    background-position: center;
   background-repeat: no-repeat;
     background-size: cover;   
-  /* background-size: auto; */
+   background-size: auto; 
   
+} */
+
+
+.splashContainer {
+
+  background-image: url(/src/assets/images/bkround_crown.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 70vh; 
+  background-position-y: bottom;
+  position: relative;
 }
 
 .crownBkRound {
@@ -141,8 +154,11 @@ a.splashFont:hover {
   color: #326f8c;
 }
 
-.test{
-  
+.splashTextLoc{
+
+ position: absolute;
+ bottom: 0;
+
 }
 
 .splashTitle{

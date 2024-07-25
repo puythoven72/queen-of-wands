@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image';
 import "../App.css";
 function HeaderComponent(props) {
 
-  const [activeLink, setActiveLink] = React.useState("/");
+  const [activeLink, setActiveLink] = React.useState("/home");
   const navigate = useNavigate();
 
   console.log(activeLink + " IS LNINK");
@@ -19,7 +19,7 @@ function HeaderComponent(props) {
       <Container fluid style={{ backgroundColor: "#eec986" }} >
 
 
-        <Navbar.Brand href="/" >
+        <Navbar.Brand href="/home" >
 
           <div className="navBarBrand navTitle">
             <Image src={logo} thumbnail />

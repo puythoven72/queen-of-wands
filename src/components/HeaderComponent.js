@@ -38,9 +38,9 @@ function HeaderComponent(props) {
               console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
               setActiveLink(selectedKey);
               navigate(selectedKey);
-              document.getElementById("eventsLink").classList.remove('active'); 
-        document.getElementById("contactLink").classList.remove('active');
-        document.getElementById("serviceLink").classList.remove('active');
+              document.getElementById("eventsLink").classList.remove('active');
+              document.getElementById("contactLink").classList.remove('active');
+              document.getElementById("serviceLink").classList.remove('active');
 
             }}
           >
@@ -67,17 +67,19 @@ function HeaderComponent(props) {
                 id="aboutLink"
               >About</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/contact" eventKey="/contact"
-                className={({ isActive }) => (isActive ? 'active' : null)}
-                id="contactLink"
-              >Contact</Nav.Link>
-            </Nav.Item>
+         
             <Nav.Item>
               <Nav.Link href="/events" eventKey="/events"
                 className={({ isActive }) => (isActive ? 'active' : null)}
                 id="eventsLink"
               >Events</Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link href="/contact" eventKey="/contact"
+                className={({ isActive }) => (isActive ? 'active' : null)}
+                id="contactLink"
+              >Contact</Nav.Link>
             </Nav.Item>
 
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

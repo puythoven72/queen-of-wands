@@ -33,13 +33,13 @@ function SplashPage() {
                     </Row>
                     <Row className=" text-center">
                         <Col>
-                            <Link to="/events" className="splashFont" onClick={event => updateNav(event, "eventsLink")}>Events</Link>
+                            <Link to="/about" className="splashFont" onClick={event => updateNav(event, "contactLink")}>About</Link>
                         </Col>
 
                     </Row>
                     <Row className="  text-center">
                         <Col>
-                            <Link to="/about" className="splashFont" onClick={event => updateNav(event, "contactLink")}>About</Link>
+                            <Link to="/events" className="splashFont" onClick={event => updateNav(event, "eventsLink")}>Events</Link>
                         </Col>
 
                     </Row>

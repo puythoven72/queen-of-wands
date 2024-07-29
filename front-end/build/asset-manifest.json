@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/queen-of-wands/static/css/main.76b1eb3e.css",
+    "main.js": "/queen-of-wands/static/js/main.e3030df9.js",
+    "static/media/backround.gif": "/queen-of-wands/static/media/backround.bf3004de10bae923f5ea.gif",
+    "static/media/tarotBack.png": "/queen-of-wands/static/media/tarotBack.7ace28db07e5f1c6352e.png",
+    "static/media/about.jpg": "/queen-of-wands/static/media/about.5d1edc8376921fe9dfac.jpg",
+    "static/media/bkround_crown.png": "/queen-of-wands/static/media/bkround_crown.957d0a437c8373478c97.png",
+    "static/media/currentEvent.png": "/queen-of-wands/static/media/currentEvent.adc178dc3eabdc68fd73.png",
+    "static/media/kaushanscript-regular-webfont.woff": "/queen-of-wands/static/media/kaushanscript-regular-webfont.c6cc66b5dec92caf2e17.woff",
+    "static/media/kingthings_willow-webfont.woff": "/queen-of-wands/static/media/kingthings_willow-webfont.085231cd118d88814f33.woff",
+    "static/media/kaushanscript-regular-webfont.woff2": "/queen-of-wands/static/media/kaushanscript-regular-webfont.7ab04fc8f8f067b7e85e.woff2",
+    "static/media/kingthings_willow-webfont.woff2": "/queen-of-wands/static/media/kingthings_willow-webfont.2e42229984c8774f2f54.woff2",
+    "static/media/Tinycrown.png": "/queen-of-wands/static/media/Tinycrown.50807093d88cf93d8b5a.png",
+    "index.html": "/queen-of-wands/index.html",
+    "main.76b1eb3e.css.map": "/queen-of-wands/static/css/main.76b1eb3e.css.map",
+    "main.e3030df9.js.map": "/queen-of-wands/static/js/main.e3030df9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76b1eb3e.css",
+    "static/js/main.e3030df9.js"
+  ]
+}

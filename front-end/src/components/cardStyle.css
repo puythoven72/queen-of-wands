@@ -92,10 +92,12 @@
   border: white, solid;
 }
 
-.aboutText{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
-  font-size: large;
+
+
+.textBackround{
+  background: rgba(0, 151, 19, 0.3);
 }
+
 
 .box {
   border-radius: 10px;

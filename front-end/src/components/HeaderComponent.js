@@ -6,68 +6,99 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from '../assets/images/logo.gif'
 import Image from 'react-bootstrap/Image';
 import "../App.css";
+
+
 function HeaderComponent(props) {
 
   const [activeLink, setActiveLink] = React.useState("/home");
   const navigate = useNavigate();
 
+
+  const [menuOpen, setMenuOpen] = React.useState(false);  // initially closed
+
+  const toggleMenu = () => {     // this handler is "regular"
+      setMenuOpen(!menuOpen);    // open and close...
+  };
+
+  const closeMenu = () => {      // ... and this one only
+      setMenuOpen(false);    // closes it ...
+  };
+
+  const toggleMobileMenu = ()=>{
+    let element = document.getElementById('basic-navbar-nav');
+    if(element.classList.contains("show")){
+      element.classList.remove("show");
+    }else{
+      element.classList.add("show");
+    }
+    
+    
+  
+  };
+
+
   console.log(activeLink + " IS LNINK");
-
-
+  //78c0de
+  //eec986
   return (
     <Navbar expand="lg" style={{ backgroundColor: "#78c0de" }}>
-      <Container fluid style={{ backgroundColor: "#eec986" }} >
+      <Container fluid style={{ backgroundColor: "#000"  }} >
 
 
         <Navbar.Brand href="/home" >
 
           <div className="navBarBrand navTitle">
             <Image src={logo} thumbnail />
-            Queen Of Wands Tarot</div>
+            Queen Of Wands Tarot
+          </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav"  />
+        <Navbar.Collapse  id="basic-navbar-nav" >
 
 
           <Nav defaultActiveKey={activeLink}
             className="me-auto mb-2 navTitle"
-            // variant="underline"
+            
+             variant="underline"
 
             onSelect={(selectedKey, event) => {
               event.preventDefault();
               console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
-              setActiveLink(selectedKey);
-              navigate(selectedKey);
+             
               document.getElementById("eventsLink").classList.remove('active');
               document.getElementById("contactLink").classList.remove('active');
               document.getElementById("serviceLink").classList.remove('active');
-
+              setActiveLink(selectedKey);
+              navigate(selectedKey);
+              toggleMobileMenu();
             }}
           >
-            <Nav.Item>
+            <Nav.Item className="navTitle">
               <Nav.Link
                 href="/home" eventKey="/home"
-                className={({ isActive }) => (isActive ? 'active' : null)}
+                className={({ isActive }) => (isActive ? 'active' : null) }
                 id="homeLink"
               >
                 Home
-
               </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
               <Nav.Link href="/services" eventKey="/services"
                 className={({ isActive }) => (isActive ? 'active' : null)}
                 id="serviceLink"
-              >Services</Nav.Link>
-
+              >Services
+              </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
               <Nav.Link href="/about" eventKey="/about"
                 className={({ isActive }) => (isActive ? 'active' : null)}
                 id="aboutLink"
-              >About</Nav.Link>
+              >About
+              </Nav.Link>
             </Nav.Item>
-         
+
             <Nav.Item>
               <Nav.Link href="/events" eventKey="/events"
                 className={({ isActive }) => (isActive ? 'active' : null)}

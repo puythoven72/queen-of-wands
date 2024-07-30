@@ -86,11 +86,11 @@ function ContactComponent() {
 
 
                 <Row  >
-                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1"  style= {{backgroundColor:'#eec986',  borderRadius: '5px'}}>
+                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 aboutText"  style= {{borderRadius: '15px' ,border: '1px solid black'}}>
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label className="title">Name</Form.Label>
+                            <Form.Label className="">Name</Form.Label>
                             <Form.Control type="text"
                                 placeholder="Enter Name"
                                 required
@@ -110,7 +110,7 @@ function ContactComponent() {
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label className="title">Email address</Form.Label>
+                            <Form.Label className="">Email address</Form.Label>
                             <Form.Control type="email"
                                 placeholder="Enter Email"
                                 required
@@ -120,13 +120,15 @@ function ContactComponent() {
                             <Form.Control.Feedback type="invalid">
                                 Please Enter Your E-Mail.
                             </Form.Control.Feedback>
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
+                           <small><small>
+                           We'll never share your email with anyone else.
+                           </small>
+                           </small>
+                          
                         </Form.Group>
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
-                            <Form.Label className="title">
+                            <Form.Label className="">
                                 Phone Number
                             </Form.Label>
                             <Row>
@@ -147,7 +149,7 @@ function ContactComponent() {
 
                         <Form.Group className="m-3" controlId="exampleForm.ControlTextarea1">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label className="title">Message (200 Characters) Please include details about services you are interested in.</Form.Label>
+                            <Form.Label className="">Message (200 Characters) Please include details about services you are interested in.</Form.Label>
                             <Form.Control as="textarea" rows={3}
                                 required
                                 name='message'

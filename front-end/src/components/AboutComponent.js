@@ -1,16 +1,19 @@
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
-
 import StringUtility from './utility/StringUtility';
-import "./cardStyle.css";
-import about from "../assets/images/about.jpg"
-function AboutComponent() {
 
+import about from "../assets/images/about.jpg"
+import background from "../assets/images/bkround_crown.png";
+import "../App.css";
+
+
+
+function AboutComponent() {
 
     return (
 
 
-        <Container >
+        <Container  >
 
             <Row className="mt-5">
                 <Col >
@@ -19,25 +22,31 @@ function AboutComponent() {
                     </h1>
                 </Col>
             </Row>
-            <Row className="text-center">
-                <Col className="mt-2" style={{ backgroundColor: '#eec986', borderRadius: '5px'}}>
-                    <h3 className="title">About</h3>
-                </Col>
-            </Row>
-            <Row >
-                <Col className="text-center  p-3 "  sm={1} lg={6} style={{ backgroundColor: '#eec986' ,borderRadius: '5px'}}>
-                    <Image src={about} roundedCircle
-                        width="75%"
-                        className="box"
-                    />
-                </Col>
+           
+                <Row className="text-center " >
+                    <Col className="mt-3" >
+                        <h3 className="title">About</h3>
+                    </Col>
+                </Row>
+                <div style={{ borderRadius: '15px' ,border: '1px solid black'}} className="aboutText">
+                <Row>
+                    <Col className="d-flex align-items-center justify-content-center text-center p-3 " sm={1} md={6} lg={6} >
+                        <Image src={about} roundedCircle
+                            width="75%"
+                            className="box"
+                        />
 
 
-                <Col className="text-center p-3 d-flex align-items-center aboutText" style={{ backgroundColor: '#eec986' }}>
-                    <p >{StringUtility.ABOUT}</p>
-                </Col>
+                    </Col>
 
-            </Row>
+
+                    <Col className="text-center p-3 d-flex align-items-center">
+                        <p>{StringUtility.ABOUT}</p>
+                    </Col>
+
+                </Row>
+            </div>
+
         </Container>
 
     );

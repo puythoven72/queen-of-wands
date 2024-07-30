@@ -16,26 +16,50 @@
 
 }
 
-.baseText{
+/* .baseText{
   font-family: 'kaushan_scriptregular', Arial, sans-serif;
   color:white;
-font-weight: bold;
+  font-weight: bold;
   text-decoration: none; 
-}
+} */
 
 
 
+.navbar-toggler-icon{
+  background-color: #326f8c;
+  }
+  
 
 nav a.active{
   background-image: url(/src/assets/images/Tinycrown.png);
   background-repeat: no-repeat;
- 
+  background-position: center;
+  color: #61dafb !important; 
+  text-shadow: 0 0 3px #000000, 0 0 7px #000000; 
 }
 
 nav a.active:hover {
   cursor: pointer;
   background-image: url(/src/assets/images/Tinycrown.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #78c0de !important;
+  
 }
+
+nav a:hover {
+  cursor: pointer;
+
+  color: #78c0de !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+nav a.nav-link {
+    color: #78c0de;
+}
+
 
 
 .App {
@@ -55,25 +79,32 @@ nav a.active:hover {
   color: #4a1a08;
   }
 
+ 
+
   .navTitle {
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
     font-weight:normal;
     font-style:normal;
-    color: #4a1a08;
+    color: #78c0de;
+   
     }
 
+ 
 
     .rounded {
       border-radius: 10px;
      size: 20px ;
     }
 
+
     .footer{
-      position:absolute;
+     
+      position:sticky;
       left:0;
       bottom:0;
       right:0;
-      background-color: #eec986; 
+      background-color: #000; 
+      color: #78c0de;
     }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -113,7 +144,7 @@ nav a.active:hover {
 
 .splashContainer {
 
-  background-image: url(/src/assets/images/bkround_crown.png);
+  background-image: url(/src/assets/images/bkround_crown2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
@@ -126,10 +157,10 @@ nav a.active:hover {
 
   background-image: url(/src/assets/images/bkround_crown.png);
 
-font-weight: bold;
-   background-position: center;
+  font-weight: bold;
+  background-position: center;
   background-repeat: no-repeat;
-    background-size: cover;   
+  background-size: cover;   
     /* background-color: #78c0de */
   /* background-size: auto; */
   
@@ -170,7 +201,13 @@ a.splashFont:hover {
 }
 
 
+.aboutText{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  font-size: large;
+color: #000;
+background: rgba(120, 192, 222, 0.7);
 
+}
 
 @media (max-width: 1050px) {    
   .splashFontLocation{
@@ -269,7 +306,6 @@ a.splashFont:hover {
 
 
 
-
 .borderTest{
   border: #4a1a08 solid;
   
@@ -283,3 +319,11 @@ a.splashFont:hover {
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+
+

@@ -13,32 +13,23 @@ import backround from './assets/images/backround.gif'
 import SplashPage from './components/SplashPage';
 import Footer from './components/Footer';
 function App() {
-
+  const [activeLink, setActiveLink] = React.useState("/home");
+ 
   return (
     <div >
       
       
         <Router>
         
-        <HeaderComponent />
+        <HeaderComponent  activeLink={activeLink} setActiveLink={setActiveLink}/>
         <div >
           <Routes>
-
-            {/* <Route path="/admin" element={<ListItemsComponent />} />
-            <Route path="/admin/add-item" element={<CreateItemComponent />} />
-            <Route path="/admin/edit-item/:id" element={<CreateItemComponent />} />
-            <Route path="/admin/add-images/:id" element={<AddImagesComponent />} /> */}
-
-            {/* <Route path="/" element={<DisplayItemsComponent />} /> */}
-            <Route path="/" element={<HomeComponent />} />
-            <Route path="/home" element={<HomeComponent />} />
-            {/* <Route path="/queen-of-wands/front-end/home" element={<HomeComponent />} /> */}
+            <Route path="/" element={<HomeComponent activeLink={activeLink} setActiveLink={setActiveLink}/>} />
+            <Route path="/home" element={<HomeComponent activeLink={activeLink} setActiveLink={setActiveLink}/>} />
             <Route path="/services" element={<ServicesComponent />} />
             <Route path="/about" element={<AboutComponent />} />
             <Route path="/contact" element={<ContactComponent />} />
             <Route path="/events" element={<EventsComponent />} />
-           
-            
           </Routes>
           </div>
          

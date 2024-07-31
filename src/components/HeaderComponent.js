@@ -9,24 +9,28 @@ import Image from 'react-bootstrap/Image';
 import "../App.css";
 
 
-function HeaderComponent() {
+function HeaderComponent(props) {
 
-  const [activeLink, setActiveLink] = React.useState("/home");
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate(activeLink);
-  }, [activeLink]);
 
-  // const [menuOpen, setMenuOpen] = React.useState(false);  // initially closed
+    //remove active class for all nav links
+    document.getElementById("/home").classList.remove('active');
+    document.getElementById("/services").classList.remove('active');
+    document.getElementById("/about").classList.remove('active');
+    document.getElementById("/contact").classList.remove('active');
+    document.getElementById("/events").classList.remove('active');
 
-  // const toggleMenu = () => {     // this handler is "regular"
-  //     setMenuOpen(!menuOpen);    // open and close...
-  // };
+    //navigate to the selected link
+    navigate(props.activeLink);
 
-  // const closeMenu = () => {      // ... and this one only
-  //     setMenuOpen(false);    // closes it ...
-  // };
+    //mark selected link as active
+    document.getElementById(props.activeLink).classList.add('active');
+  }, [props.activeLink]);
+
+
 
   const toggleMobileMenu = () => {
     let element = document.getElementById('basic-navbar-nav');
@@ -41,13 +45,11 @@ function HeaderComponent() {
   };
 
 
-  console.log(activeLink + " IS LNINK");
   //78c0de
   //eec986
   return (
-    <Navbar expand="lg" style={{ backgroundColor: "#78c0de" }}>
+    <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#78c0de" }}>
       <Container fluid style={{ backgroundColor: "#000" }} >
-
 
         <Navbar.Brand href="/" >
 
@@ -60,27 +62,21 @@ function HeaderComponent() {
         <Navbar.Collapse id="basic-navbar-nav" >
 
 
-          <Nav defaultActiveKey={activeLink}
+          <Nav defaultActiveKey={props.activeLink}
             className="me-auto mb-2 navLink"
             variant="underline"
 
             onSelect={(selectedKey, event) => {
               event.preventDefault();
-              console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
-
-              document.getElementById("eventsLink").classList.remove('active');
-              document.getElementById("contactLink").classList.remove('active');
-              document.getElementById("serviceLink").classList.remove('active');
-              setActiveLink(selectedKey);
-              // navigate(selectedKey);
-              toggleMobileMenu();
+              props.setActiveLink(selectedKey);
+         
             }}
           >
             <Nav.Item className="navTitle">
               <Nav.Link
                 href="/home" eventKey="/home"
-                className={({ isActive }) => (isActive ? 'active' : null)}
-                id="homeLink"
+
+                id="/home"
               >
                 Home
               </Nav.Link>
@@ -88,31 +84,31 @@ function HeaderComponent() {
 
             <Nav.Item>
               <Nav.Link href="/services" eventKey="/services"
-                className={({ isActive }) => (isActive ? 'active' : null)}
-                id="serviceLink"
+
+                id="/services"
               >Services
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link href="/about" eventKey="/about"
-                className={({ isActive }) => (isActive ? 'active' : null)}
-                id="aboutLink"
+
+                id="/about"
               >About
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link href="/events" eventKey="/events"
-                className={({ isActive }) => (isActive ? 'active' : null)}
-                id="eventsLink"
+
+                id="/events"
               >Events</Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link href="/contact" eventKey="/contact"
-                className={({ isActive }) => (isActive ? 'active' : null)}
-                id="contactLink"
+
+                id="/contact"
               >Contact</Nav.Link>
             </Nav.Item>
 
@@ -129,7 +125,7 @@ function HeaderComponent() {
             </NavDropdown> */}
           </Nav>
 
-          
+
 
 
         </Navbar.Collapse>

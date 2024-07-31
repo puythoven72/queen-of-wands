@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/queen-of-wands/static/css/main.5f6f690e.css",
+    "main.css": "/queen-of-wands/static/css/main.80cd1fcc.css",
     "main.js": "/queen-of-wands/static/js/main.f4480587.js",
     "static/media/backround.gif": "/queen-of-wands/static/media/backround.bf3004de10bae923f5ea.gif",
     "static/media/tarotBack.png": "/queen-of-wands/static/media/tarotBack.7ace28db07e5f1c6352e.png",
@@ -14,11 +14,11 @@
     "static/media/kingthings_willow-webfont.woff2": "/queen-of-wands/static/media/kingthings_willow-webfont.2e42229984c8774f2f54.woff2",
     "static/media/Tinycrown.png": "/queen-of-wands/static/media/Tinycrown.50807093d88cf93d8b5a.png",
     "index.html": "/queen-of-wands/index.html",
-    "main.5f6f690e.css.map": "/queen-of-wands/static/css/main.5f6f690e.css.map",
+    "main.80cd1fcc.css.map": "/queen-of-wands/static/css/main.80cd1fcc.css.map",
     "main.f4480587.js.map": "/queen-of-wands/static/js/main.f4480587.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f6f690e.css",
+    "static/css/main.80cd1fcc.css",
     "static/js/main.f4480587.js"
   ]
 }

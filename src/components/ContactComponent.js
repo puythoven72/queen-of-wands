@@ -1,10 +1,12 @@
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 import Input from 'react-phone-number-input/input'
 import Form from 'react-bootstrap/Form';
 import '../App.js';
 import emailjs from 'emailjs-com';
 import "../App.css";
+import axios from 'axios';
+import EmailAPI from '../services/emailAPI';
 
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -12,8 +14,13 @@ const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
 function ContactComponent() {
+
+    
+
+
+
     const [value, setValue] = useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    // const [isSubmitting, setIsSubmitting] = useState(false);
     const [validated, setValidated] = useState(false);
     // const [stateMessage, setStateMessage] = useState(null);
 
@@ -26,17 +33,30 @@ function ContactComponent() {
         return <a href={`mailto:${email}${params}`}>{children}</a>;
     };
 
-    const handleOnSubmit = (e) => {
+
+    async function sendMessage(message) {
+      //  console.log(message.from_name)
+        await EmailAPI.sendMessage(message).then((response) => {
+
+
+            console.log(response.data);
+        }).catch(error => { console.log(error) })
+    }
+
+
+    const handleOnSubmit = (e,formData) => {
         e.preventDefault();
         setValidated(false);
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-            .then((result) => {
-                console.log(result.text);
-                alert('Message Sent Successfully')
-            }, (error) => {
-                console.log(error.text);
-                alert('Something went wrong!')
-            });
+       
+        sendMessage(formData);
+        // // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+        // .then((result) => {
+        //     console.log(result.text);
+        //     alert('Message Sent Successfully')
+        // }, (error) => {
+        //     console.log(error.text);
+        //     alert('Something went wrong!')
+        // });
 
         e.target.reset();
         setValue("");
@@ -46,6 +66,7 @@ function ContactComponent() {
 
     const validateInput = (event) => {
         const form = event.currentTarget;
+      
         //Check Phone Is valid, or empty
         const validPhone = validatePhone(form.phone.value);
         if (!validPhone) {
@@ -57,7 +78,14 @@ function ContactComponent() {
             event.stopPropagation();
             setValidated(true);
         } else {
-            handleOnSubmit(event);
+            let formData = {
+                "from_name": form.from_name.value,
+                "from_email": form.from_email.value,
+                "phone": form.phone.value,
+                "message":form.message.value
+            };
+           
+            handleOnSubmit(event,formData);
         }
     };
 
@@ -86,7 +114,7 @@ function ContactComponent() {
 
 
                 <Row  >
-                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 aboutText"  style= {{borderRadius: '15px' ,border: '1px solid black'}}>
+                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 aboutText" style={{ borderRadius: '15px', border: '1px solid black' }}>
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
                             <span style={{ color: "red" }}>*</span>
@@ -120,11 +148,11 @@ function ContactComponent() {
                             <Form.Control.Feedback type="invalid">
                                 Please Enter Your E-Mail.
                             </Form.Control.Feedback>
-                           <small><small>
-                           We'll never share your email with anyone else.
-                           </small>
-                           </small>
-                          
+                            <small><small>
+                                We'll never share your email with anyone else.
+                            </small>
+                            </small>
+
                         </Form.Group>
 
                         <Form.Group className="m-3" controlId="formBasicEmail">

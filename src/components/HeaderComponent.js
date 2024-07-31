@@ -1,5 +1,6 @@
 import { useNavigate, NavLink, BrowserRouter as Router, } from "react-router-dom";
 import React from "react";
+import { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,32 +9,35 @@ import Image from 'react-bootstrap/Image';
 import "../App.css";
 
 
-function HeaderComponent(props) {
+function HeaderComponent() {
 
   const [activeLink, setActiveLink] = React.useState("/home");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    navigate(activeLink);
+  }, [activeLink]);
 
-  const [menuOpen, setMenuOpen] = React.useState(false);  // initially closed
+  // const [menuOpen, setMenuOpen] = React.useState(false);  // initially closed
 
-  const toggleMenu = () => {     // this handler is "regular"
-      setMenuOpen(!menuOpen);    // open and close...
-  };
+  // const toggleMenu = () => {     // this handler is "regular"
+  //     setMenuOpen(!menuOpen);    // open and close...
+  // };
 
-  const closeMenu = () => {      // ... and this one only
-      setMenuOpen(false);    // closes it ...
-  };
+  // const closeMenu = () => {      // ... and this one only
+  //     setMenuOpen(false);    // closes it ...
+  // };
 
-  const toggleMobileMenu = ()=>{
+  const toggleMobileMenu = () => {
     let element = document.getElementById('basic-navbar-nav');
-    if(element.classList.contains("show")){
+    if (element.classList.contains("show")) {
       element.classList.remove("show");
-    }else{
+    } else {
       element.classList.add("show");
     }
-    
-    
-  
+
+
+
   };
 
 
@@ -42,41 +46,40 @@ function HeaderComponent(props) {
   //eec986
   return (
     <Navbar expand="lg" style={{ backgroundColor: "#78c0de" }}>
-      <Container fluid style={{ backgroundColor: "#000"  }} >
+      <Container fluid style={{ backgroundColor: "#000" }} >
 
 
-        <Navbar.Brand href="/home" >
+        <Navbar.Brand href="/" >
 
-          <div className="navBarBrand navTitle">
+          <div className="navBarBrand">
             <Image src={logo} thumbnail />
             Queen Of Wands Tarot
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"  />
-        <Navbar.Collapse  id="basic-navbar-nav" >
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" >
 
 
           <Nav defaultActiveKey={activeLink}
-            className="me-auto mb-2 navTitle"
-            
-             variant="underline"
+            className="me-auto mb-2 navLink"
+            variant="underline"
 
             onSelect={(selectedKey, event) => {
               event.preventDefault();
               console.log("selected key is: ", selectedKey + " EVENT IS " + event.currentTarget);
-             
+
               document.getElementById("eventsLink").classList.remove('active');
               document.getElementById("contactLink").classList.remove('active');
               document.getElementById("serviceLink").classList.remove('active');
               setActiveLink(selectedKey);
-              navigate(selectedKey);
+              // navigate(selectedKey);
               toggleMobileMenu();
             }}
           >
             <Nav.Item className="navTitle">
               <Nav.Link
                 href="/home" eventKey="/home"
-                className={({ isActive }) => (isActive ? 'active' : null) }
+                className={({ isActive }) => (isActive ? 'active' : null)}
                 id="homeLink"
               >
                 Home
@@ -126,7 +129,7 @@ function HeaderComponent(props) {
             </NavDropdown> */}
           </Nav>
 
-
+          
 
 
         </Navbar.Collapse>

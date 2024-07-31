@@ -46,7 +46,7 @@
     background-size: cover;   
     color: black;
     /* text-shadow: 0 0 10px #000, 0 0 10px #000;   */
-    text-shadow: 0 0 5px #edac0e, 0 0 7px #fff;  
+    text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;  
   }
 
  .splashFont:hover {
@@ -60,9 +60,10 @@
   .cardTitle{
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
     text-shadow: 0 0 3px #326f8c, 0 0 7px #edac0e; 
+    text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;  
   } 
   .card-back {
-    /* font-family: 'kaushan_scriptregular', Arial, sans-serif; */
+    font-family: 'kaushan_scriptregular', Arial, sans-serif;
     display: flex; 
   
     overflow-y: auto;
@@ -74,14 +75,12 @@
     align-items: center */
     /* justify-content: center;
     align-items: center; */
-    color: #333;
-    background-color: #eec986;
-    /* border: 1px solid #ccc; */
+    color: #000;
     border-radius: 10px;
     height: 50vh; 
     width: 30vh;
     padding: 10px;
-    background-image: linear-gradient(to bottom, rgba(238, 201, 134, 1) 0%, rgba(238, 201, 134, 1) 100%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-image: linear-gradient(to bottom,  rgba(120, 192, 222, 0.7)0%,  rgba(120, 192, 222, 0.7) 30%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
     background-clip: content-box, padding-box;
   }
    .car-card img {

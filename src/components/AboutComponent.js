@@ -28,9 +28,9 @@ function AboutComponent() {
                         <h3 className="title">About</h3>
                     </Col>
                 </Row>
-                <div style={{ borderRadius: '15px' ,border: '1px solid black'}} className="aboutText">
+                <div style={{ borderRadius: '15px' ,border: '1px solid black'}} className="aboutText p-3">
                 <Row>
-                    <Col className="d-flex align-items-center justify-content-center text-center p-3 " sm={1} md={6} lg={6} >
+                    <Col className="d-flex align-items-center justify-content-center text-center  " sm={1} md={6} lg={6} >
                         <Image src={about} roundedCircle
                             width="75%"
                             className="box"

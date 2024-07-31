@@ -8,6 +8,9 @@ function SplashPage() {
 
     function updateNav(e, navItem) {
         document.getElementById("homeLink").classList.remove('active');
+        document.getElementById("serviceLink").classList.remove('active');
+        document.getElementById("aboutLink").classList.remove('active');
+        document.getElementById("contactLink").classList.remove('active');
         document.getElementById(navItem).classList.add('active');
 
     };
@@ -33,7 +36,7 @@ function SplashPage() {
                     </Row>
                     <Row className=" text-center">
                         <Col>
-                            <Link to="/about" className="splashFont" onClick={event => updateNav(event, "contactLink")}>About</Link>
+                            <Link to="/about" className="splashFont" onClick={event => updateNav(event, "aboutLink")}>About</Link>
                         </Col>
 
                     </Row>
@@ -43,7 +46,7 @@ function SplashPage() {
                         </Col>
 
                     </Row>
-                    <Row className="text-center">
+                    <Row className="text-center pb-2">
                         <Col >
 
                             <Link to="/contact" className="splashFont" onClick={event => updateNav(event, "contactLink")}>Contact</Link>

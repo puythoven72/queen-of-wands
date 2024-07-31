@@ -32,6 +32,7 @@ function App() {
             {/* <Route path="/" element={<DisplayItemsComponent />} /> */}
             <Route path="/" element={<HomeComponent />} />
             <Route path="/home" element={<HomeComponent />} />
+            {/* <Route path="/queen-of-wands/front-end/home" element={<HomeComponent />} /> */}
             <Route path="/services" element={<ServicesComponent />} />
             <Route path="/about" element={<AboutComponent />} />
             <Route path="/contact" element={<ContactComponent />} />

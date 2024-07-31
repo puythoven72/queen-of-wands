@@ -16,13 +16,6 @@
 
 }
 
-/* .baseText{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
-  color:white;
-  font-weight: bold;
-  text-decoration: none; 
-} */
-
 
 
 .navbar-toggler-icon{
@@ -33,9 +26,10 @@
 nav a.active{
   background-image: url(/src/assets/images/Tinycrown.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position:center;
   color: #61dafb !important; 
   text-shadow: 0 0 3px #000000, 0 0 7px #000000; 
+ 
 }
 
 nav a.active:hover {
@@ -44,16 +38,13 @@ nav a.active:hover {
   background-repeat: no-repeat;
   background-position: center;
   color: #78c0de !important;
-  
 }
 
 nav a:hover {
   cursor: pointer;
-
   color: #78c0de !important;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
 
 nav a.nav-link {
@@ -81,15 +72,17 @@ nav a.nav-link {
 
  
 
-  .navTitle {
+  .navBarBrand {
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
-    font-weight:normal;
-    font-style:normal;
     color: #78c0de;
-   
+    font-size: 2rem;
     }
 
  
+    .navLink{
+      font-family: 'kaushan_scriptregular', Arial, sans-serif;
+      color: #78c0de;
+    }
 
     .rounded {
       border-radius: 10px;
@@ -107,11 +100,11 @@ nav a.nav-link {
       color: #78c0de;
     }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -154,9 +147,7 @@ nav a.nav-link {
 }
 
 .crownBkRound {
-
   background-image: url(/src/assets/images/bkround_crown.png);
-
   font-weight: bold;
   background-position: center;
   background-repeat: no-repeat;
@@ -166,11 +157,7 @@ nav a.nav-link {
   
 }
 
-.splashFontLocation{
 
- padding-top:  35%;
-  
-}
 .splashFont{
   font-family: 'kaushan_scriptregular', Arial, sans-serif;
   color:white;
@@ -186,10 +173,8 @@ a.splashFont:hover {
 }
 
 .splashTextLoc{
-
  position: absolute;
  bottom: 0;
-
 }
 
 .splashTitle{
@@ -197,7 +182,7 @@ a.splashFont:hover {
       /* 40px/16=2.5em */
       color: black;
       font-size: 4rem;
-  text-shadow: 0 0 3px #edac0e, 0 0 7px #326f8c; 
+  text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;  
 }
 
 
@@ -206,98 +191,52 @@ a.splashFont:hover {
   font-size: large;
 color: #000;
 background: rgba(120, 192, 222, 0.7);
-
 }
 
-@media (max-width: 1050px) {    
-  .splashFontLocation{
-    padding-top:  70%;
+
+
+@media (max-width: 961px) {    
+ 
+  nav a.active{
+   background-position: left;
   }
-  } 
-
-
-  @media (max-width: 1050px ) and (max-height: 601px) {    
-    .splashFontLocation{
-      padding-top:  28%;
-    }
-    } 
-
-
-  @media (max-width: 1000px) {    
-    .splashFontLocation{
-      padding-top:  90%;
-    }
-    } 
-
-
-
-
-@media (max-width: 900px) {    
-  .splashFontLocation{
-    padding-top:  85%;
-  }
-
   
+  nav a.active:hover {
+    background-position: left;
+  }
+
   .splashTitle{
-    
     font-size: 3rem;
+  } 
 
 }
-  } 
 
 
-
-@media (max-width: 800px) {    
-  .splashFontLocation{
-    padding-top:  70%;
-  }
-
-  } 
-
-
-  @media (max-width: 600px) {    
-    .splashFontLocation{
-      padding-top:  65%;
+@media (max-width: 576px ) {    
+ 
+  .navBarBrand {
+   
+    font-size: 1rem;
     }
-  } 
+
+}
+
+
+
+
   
 
-  @media (max-width: 500px) {    
-    .splashFontLocation{
-      padding-top:  105%;
-    }
-  } 
-
-  @media (max-width: 450px) {    
-    .splashFontLocation{
-      padding-top:  108%;
-    }
-  } 
 
 
-  @media (max-width: 400px) {    
-    .splashFontLocation{
-      padding-top:  105%;
-    }
-  } 
 
-    @media (max-width: 376px) {    
-      .splashFontLocation{
-        padding-top:  85%;
-      }
-    } 
 
-  @media (max-width: 365px) {    
-    .splashFontLocation{
-      padding-top:  100%;
-    }
-  } 
 
-  @media (max-width: 350px) {    
-    .splashFontLocation{
-      padding-top:  125%;
-    }
-  } 
+
+
+
+
+
+
 
  
 

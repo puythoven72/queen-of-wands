@@ -1,5 +1,6 @@
 {
-  "homepage": "https://puythoven72.github.io/queen-of-wands/front-end/",
+  "homepage": "https://puythoven72.github.io/queen-of-wands",
+ 
   "name": "queen-of-wands",
   "version": "0.1.0",
   "private": true,
@@ -49,4 +50,5 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
+  
 }

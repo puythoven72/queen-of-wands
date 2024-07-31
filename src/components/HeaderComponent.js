@@ -53,9 +53,9 @@ function HeaderComponent(props) {
 
         <Navbar.Brand href="/" >
 
-          <div className="navBarBrand">
+          <div className="navBarBrand ">
             <Image src={logo} thumbnail />
-            Queen Of Wands Tarot
+           <span className="navTitleBorder m-2">Queen Of Wands Tarot</span> 
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

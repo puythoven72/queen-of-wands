@@ -63,20 +63,22 @@ nav a.nav-link {
 }
 
 
-.title {
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
-  font-weight:normal;
-  font-style:normal;
-  color: #4a1a08;
+.navTitleBorder {
+ border-top: 2px solid #eec986;
+ border-bottom: 2px solid #eec986;
+ padding: 2px;
+
   }
 
  
 
   .navBarBrand {
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
-    color: #78c0de;
-    font-size: 2rem;
-    }
+    font-family: 'kaushan_scriptregular', Arial, sans-serif;
+      color: #78c0de;
+      font-size: 2rem;
+    
+  }
 
  
     .navLink{

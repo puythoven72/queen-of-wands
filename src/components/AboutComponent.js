@@ -25,7 +25,7 @@ function AboutComponent() {
            
                 <Row className="text-center " >
                     <Col className="mt-3" >
-                        <h3 className="title">About</h3>
+                        <h3 className="splashTitle">About</h3>
                     </Col>
                 </Row>
                 <div style={{ borderRadius: '15px' ,border: '1px solid black'}} className="aboutText p-3">

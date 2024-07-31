@@ -185,6 +185,9 @@ a.splashFont:hover {
       color: black;
       font-size: 4rem;
   text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;  
+  border-top: 3px solid #eec986;
+  border-bottom: 3px solid #eec986;
+  padding: 2px;
 }
 
 

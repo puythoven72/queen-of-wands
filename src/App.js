@@ -22,7 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeComponent activeLink={activeLink} setActiveLink={setActiveLink}/>} />
             <Route path="/home" element={<HomeComponent activeLink={activeLink} setActiveLink={setActiveLink}/>} />
-            <Route path="/services" element={<ServicesComponent />} />
+            <Route path="/services" element={<ServicesComponent activeLink={activeLink} setActiveLink={setActiveLink} />} />
             <Route path="/about" element={<AboutComponent />} />
             <Route path="/contact" element={<ContactComponent />} />
             <Route path="/events" element={<EventsComponent />} />

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from '../assets/images/logo.gif'
+import logo from '../assets/images/logo.png'
 import Image from 'react-bootstrap/Image';
 import "../App.css";
 
@@ -32,30 +32,19 @@ function HeaderComponent(props) {
 
 
 
-  const toggleMobileMenu = () => {
-    let element = document.getElementById('basic-navbar-nav');
-    if (element.classList.contains("show")) {
-      element.classList.remove("show");
-    } else {
-      element.classList.add("show");
-    }
-
-
-
-  };
 
 
   //78c0de
   //eec986
   return (
-    <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#78c0de" }}>
-      <Container fluid style={{ backgroundColor: "#000" }} >
+    <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#c8b568" }}>
+      <Container fluid style={{ backgroundColor: "#3A415C" }} >
 
         <Navbar.Brand href="/" >
 
           <div className="navBarBrand ">
-            <Image src={logo} thumbnail />
-           <span className="navTitleBorder m-2 p-2">Queen Of Wands Tarot</span> 
+            <Image src={logo}  />
+           
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

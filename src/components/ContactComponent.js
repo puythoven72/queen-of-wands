@@ -2,11 +2,9 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import Input from 'react-phone-number-input/input'
 import Form from 'react-bootstrap/Form';
-import '../App.js';
 import emailjs from 'emailjs-com';
 import "../App.css";
-import axios from 'axios';
-import EmailAPI from '../services/emailAPI';
+import Alert from 'react-bootstrap/Alert';
 
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -15,14 +13,44 @@ const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
 function ContactComponent() {
 
-    
-
-
-
     const [value, setValue] = useState("");
-    // const [isSubmitting, setIsSubmitting] = useState(false);
+    //used for messages
+    const [submitStatus, setSubmitStatus] = useState(null);
+    const [messageDisplay, setMessageDisplay] = useState("");
+    const [alertVariant, setAlertVariant] = useState("");
+
     const [validated, setValidated] = useState(false);
-    // const [stateMessage, setStateMessage] = useState(null);
+    const successMessage = "Success - Your Message Has Been Successfully Submitted";
+    const errorPhone = "Error - Invalid Phone Number";
+    const errorMessage = "Error - Your Form Has Not Been Submitted. Something Went Wrong!";
+
+
+    useEffect(() => {
+        displayMessage()
+    }, [submitStatus]);
+
+
+    const displayMessage = () => {
+        switch (submitStatus) {
+            case "success":
+                setAlertVariant("success");
+                setMessageDisplay(successMessage);
+                break;
+            case "errorPhone":
+                setAlertVariant("danger");
+                setMessageDisplay(errorPhone);
+                break;
+            case "error":
+                setAlertVariant("danger");
+                setMessageDisplay(errorMessage);
+                break;
+
+        }
+    }
+
+    const clearMessage = () => {
+        setSubmitStatus(null);
+    };
 
 
     const Mailto = ({ email, subject = '', body = '', children }) => {
@@ -34,29 +62,21 @@ function ContactComponent() {
     };
 
 
-    async function sendMessage(message) {
-      //  console.log(message.from_name)
-        await EmailAPI.sendMessage(message).then((response) => {
 
 
-            console.log(response.data);
-        }).catch(error => { console.log(error) })
-    }
 
-
-    const handleOnSubmit = (e,formData) => {
+    const handleOnSubmit = (e) => {
         e.preventDefault();
         setValidated(false);
-       
-        sendMessage(formData);
-        // // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-        // .then((result) => {
-        //     console.log(result.text);
-        //     alert('Message Sent Successfully')
-        // }, (error) => {
-        //     console.log(error.text);
-        //     alert('Something went wrong!')
-        // });
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+                setSubmitStatus("success")
+            }, (error) => {
+                console.log(error.text);
+                setSubmitStatus('error')
+            });
 
         e.target.reset();
         setValue("");
@@ -66,11 +86,11 @@ function ContactComponent() {
 
     const validateInput = (event) => {
         const form = event.currentTarget;
-      
+
         //Check Phone Is valid, or empty
         const validPhone = validatePhone(form.phone.value);
         if (!validPhone) {
-            alert("Invaild Phone Number");
+            setSubmitStatus("errorPhone");
         }
         //Check required fields
         if (form.checkValidity() === false || !validPhone) {
@@ -78,14 +98,7 @@ function ContactComponent() {
             event.stopPropagation();
             setValidated(true);
         } else {
-            let formData = {
-                "from_name": form.from_name.value,
-                "from_email": form.from_email.value,
-                "phone": form.phone.value,
-                "message":form.message.value
-            };
-           
-            handleOnSubmit(event,formData);
+            handleOnSubmit(event);
         }
     };
 
@@ -101,6 +114,8 @@ function ContactComponent() {
     return (
         <>
             <Container>
+               
+
                 <Row className="mt-5  d-flex align-items-center justify-content-center text-center">
                     <Col className="">
                         <h1 className="splashTitle ">
@@ -114,6 +129,15 @@ function ContactComponent() {
 
 
                 <Row  >
+
+                <>
+                    {submitStatus != null ?
+                        <Alert key={alertVariant} variant={alertVariant} className="mt-2">
+                            {messageDisplay}
+                        </Alert>
+                        : null
+                    }
+                </>
                     <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 aboutText" style={{ borderRadius: '15px', border: '1px solid black' }}>
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
@@ -125,6 +149,7 @@ function ContactComponent() {
                                 name='from_name'
                                 minLength="3"
                                 maxLength="30"
+
                             />
 
                             <Form.Control.Feedback type="invalid">
@@ -194,7 +219,7 @@ function ContactComponent() {
 
 
 
-                        <Button variant="primary" type="submit" className="mb-5" >
+                        <Button variant="" type="submit" className="mb-5 btn-custom " >
                             Submit
                         </Button>
                         {/* <Row className="mt-2 baseText">

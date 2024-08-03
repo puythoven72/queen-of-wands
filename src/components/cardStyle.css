@@ -19,53 +19,80 @@
     width: 400px;
     height: 100%;
     display: flex;
-     align-items: center; 
+    align-items: center; 
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden; 
     transition: transform 0.5s;
-   
-   
   }
 
   .card-border{
    
-    box-shadow: 3px 3px 10px 0px #326f8c;
+    box-shadow: 3px 3px 8px 0px #262b3d;
   }
 
   .card-front{
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
     background-image: url(/src/assets/images/tarotBack.png);
     background-size: cover;
-    height: 50vh; 
+    height: 52vh; 
     width: 30vh;
     border-radius: 10px;
    background-position: center;
   background-repeat: no-repeat;
     background-size: cover;   
-    color: black;
+    color: #c8b568; 
     /* text-shadow: 0 0 10px #000, 0 0 10px #000;   */
-    text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;  
+    text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
+  
   }
 
- .splashFont:hover {
+ /* .splashFont:hover {
     cursor: pointer;
     color: #326f8c;
-  }
+  } */
   
 
-
+.cardHeader{
+  background-color: rgba(58,65,92, 0.7);
+  /* height: 35vh; 
+  width: 30vh;  */
+}
 
   .cardTitle{
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
-    text-shadow: 0 0 3px #326f8c, 0 0 7px #edac0e; 
-    text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;  
+    /* text-shadow: 0 0 3px #326f8c, 0 0 7px #edac0e; 
+    text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;   */
+    text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
   } 
+
+  .card-backTest{
+    background: rgba(78, 87, 123, 0.7);
+  
+  
+  }
+  .card-text { 
+      height: 32vh; 
+    width: 30vh; 
+    overflow-y: scroll; 
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    text-shadow: black solid;
+   
+    background-image: url(../assets/images/logo.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    /* background: rgba(78, 87, 123, 0.7)!important; */
+    /* color: #3A415C; */
+    /* background-image: linear-gradient(to bottom,  rgba(185, 154, 69, 0.7) 10%,  rgba(185, 154, 69, 2.7) 90%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%); */
+    /* background-clip: content-box, padding-box; */
+  }
+
   .card-back {
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
     display: flex; 
-  
     overflow-y: auto;
   
     /* border-radius: 10px;
@@ -75,14 +102,24 @@
     align-items: center */
     /* justify-content: center;
     align-items: center; */
-    color: #000;
+    color: #3A415C;
     border-radius: 10px;
-    height: 50vh; 
+    height: 52vh; 
     width: 30vh;
-    padding: 10px;
-    background-image: linear-gradient(to bottom,  rgba(120, 192, 222, 0.7)0%,  rgba(120, 192, 222, 0.7) 30%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    /* padding: 10px; */
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    background-image: linear-gradient(to bottom,  rgba(185, 154, 69, 0.7) 10%,  rgba(185, 154, 69, 2.7) 90%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
     background-clip: content-box, padding-box;
   }
+
+.cardDirection{
+  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  color: #3A415C;
+}
+
    .car-card img {
     max-width: 100%;
     max-height: 100%;
@@ -98,7 +135,7 @@
 }
 
 
-.box {
+.aboutImage {
   border-radius: 10px;
   margin-top: 1rem;
   /* width: 50%;
@@ -107,7 +144,7 @@
   background-color: #f5f5f5;
   border: 1px solid #000;
   /* Box Shadow */
-  box-shadow: 1px 1px 10px 0px #326f8c;
+  box-shadow: 1px 1px 10px 0px #d5c28f;
 }
 
   @media(max-width:800px) {

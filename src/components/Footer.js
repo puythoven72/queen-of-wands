@@ -20,7 +20,7 @@ function Footer() {
                 </Row>
                 <Row className='p-2'>
                     <Col className='d-flex align-items-center justify-content-center text-center'>
-                        <small> <small> {`Copyright © Queen Of Wands ${year}`}</small></small>
+                        <small> <small> {`Copyright © Queen Of Wands Tarot Advising, LTD  ${year}`}</small></small>
                     </Col>
                 </Row>
 

@@ -44,18 +44,9 @@ function SplashPage(props) {
 
                             <Link to="/contact" className="splashFont" onClick={event => updateNav(event, "/contact")}>Contact</Link>
                         </Col>
-
                     </Row>
-
                 </Col>
-
             </Row>
-
-
-
-
-
-
         </Container>
 
     );

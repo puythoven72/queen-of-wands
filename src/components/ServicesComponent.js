@@ -2,7 +2,7 @@ import Cards from './MultipleFlipCards';
 import { Row, Col, Container } from "react-bootstrap";
 
 
-function ServicesComponent() {
+function ServicesComponent(props) {
 
    return (
       <Container >
@@ -14,9 +14,9 @@ function ServicesComponent() {
                </h1>
             </Col>
          </Row>
-         <Row className="mt-5">
+         <Row className="mt-3">
 
-            <Cards />
+            <Cards activeLink={props.activeLink} setActiveLink={props.setActiveLink}/>
          </Row>
       </Container>
 

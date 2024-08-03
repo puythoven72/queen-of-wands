@@ -17,7 +17,7 @@ function AboutComponent() {
 
             <Row className="mt-5">
                 <Col >
-                    <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center">
+                    <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center mb-3">
                        About Queen Of Wands Tarot Advising
                     </h1>
                 </Col>
@@ -28,20 +28,22 @@ function AboutComponent() {
                         <h3 className="splashTitle">About</h3>
                     </Col>
                 </Row> */}
-                <div style={{ borderRadius: '15px' ,border: '1px solid black'}} className="aboutText p-3">
+                <div style={{ borderRadius: '15px' ,border: '1px solid black'}} className="aboutText mt-3 p-3">
                 <Row>
                     <Col className="d-flex align-items-center justify-content-center text-center  " sm={1} md={6} lg={6} >
                         <Image src={about} roundedCircle
                             width="75%"
-                            className="box"
+                            className="aboutImage"
                         />
 
 
                     </Col>
 
 
-                    <Col className="text-center p-3 d-flex align-items-center">
-                        <p>{StringUtility.ABOUT}</p>
+                    <Col className="text-center p-3  d-flex align-items-center">
+                        {/* <p>{StringUtility.ABOUT}</p> */}
+                    
+                        <div className="p-1" dangerouslySetInnerHTML={{ __html: StringUtility.ABOUT }} />
                     </Col>
 
                 </Row>

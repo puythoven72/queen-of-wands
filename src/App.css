@@ -16,18 +16,26 @@
 
 }
 
-
-
+/* c8b568 */
+/* 
+#C7AE6A
 .navbar-toggler-icon{
-  background-color: #326f8c;
-  }
+  background-color: #C7AE6A;
+  border-color: #C7AE6A;
+  } */
+ 
+    .navbar .navbar-toggler{
+      background-color: #c8b568;
   
+      }
 
+
+  
 nav a.active{
   background-image: url(/src/assets/images/Tinycrown.png);
   background-repeat: no-repeat;
   background-position:center;
-  color: #61dafb !important; 
+  color: #d5c28f !important; 
   text-shadow: 0 0 3px #000000, 0 0 7px #000000; 
  
 }
@@ -37,18 +45,19 @@ nav a.active:hover {
   background-image: url(/src/assets/images/Tinycrown.png);
   background-repeat: no-repeat;
   background-position: center;
-  color: #78c0de !important;
+  color: #d5c28f !important;
 }
 
 nav a:hover {
   cursor: pointer;
-  color: #78c0de !important;
+  color: #c8b568 !important;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 nav a.nav-link {
-    color: #78c0de;
+    color: #c8b568;
+ 
 }
 
 
@@ -64,8 +73,8 @@ nav a.nav-link {
 
 
 .navTitleBorder {
- border-top: 2px solid #eec986;
- border-bottom: 2px solid #eec986;
+ border-top: 2px solid #c8b568;
+ border-bottom: 2px solid #c8b568;
  padding: 2px;
 
   }
@@ -75,15 +84,16 @@ nav a.nav-link {
   .navBarBrand {
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
-      color: #78c0de;
+      color: #d5c28f;
       font-size: 2rem;
-    
+      text-shadow: 0 0 5px #c8b568, 0 0 7px #000000;  
+      margin-right: 10px;
   }
 
  
     .navLink{
       font-family: 'kaushan_scriptregular', Arial, sans-serif;
-      color: #78c0de;
+      /* color: #78c0de; */
     }
 
     .rounded {
@@ -94,12 +104,12 @@ nav a.nav-link {
 
     .footer{
      
-      position:sticky;
+      position:relative;
       left:0;
       bottom:0;
       right:0;
-      background-color: #000; 
-      color: #78c0de;
+      background-color: #262b3d; 
+      color: #c8b568;
     }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -121,9 +131,9 @@ nav a.nav-link {
 
 
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 /* .main {
 
@@ -162,16 +172,16 @@ nav a.nav-link {
 
 .splashFont{
   font-family: 'kaushan_scriptregular', Arial, sans-serif;
-  color:white;
+  color: #262b3d;  
   font-size: xx-large;
-  text-shadow: 0 0 3px #000000, 0 0 7px #000000; 
+   text-shadow: 0 0 3px #262b3d, 0 0 7px #c8b568;  
   text-decoration: none; 
 }
 
 
 a.splashFont:hover {
   cursor: pointer;
-  color: #326f8c;
+  color: #4e577b;
 }
 
 .splashTextLoc{
@@ -179,25 +189,39 @@ a.splashFont:hover {
  bottom: 0;
 }
 
+/* c8b568 */
 .splashTitle{
   font-family: 'kaushan_scriptregular', Arial, sans-serif;
       /* 40px/16=2.5em */
-      color: black;
+       color: #262b3d; 
+       /* 3A415C  */
       font-size: 4rem;
-  text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;  
-  border-top: 3px solid #eec986;
-  border-bottom: 3px solid #eec986;
+  text-shadow: 0 0 5px #d5c28f, 0 0 7px #262b3d;  
+  border-top: 3px solid #c8b568;
+  border-bottom: 3px solid #c8b568;
   padding: 2px;
 }
 
 
 .aboutText{
   font-family: 'kaushan_scriptregular', Arial, sans-serif;
-  font-size: large;
-color: #000;
-background: rgba(120, 192, 222, 0.7);
+  font-size:large;
+  color: #d5c28f;
+  background: rgba(78, 87, 123, 0.7);
+  background: rgba(58,65,92, 0.7);
 }
 
+.btn-custom {
+  background-color: #b99a45 !important;
+color: #262b3d !important;
+}
+
+.btn-custom:hover{
+ 
+  background-color: #c8b568 !important;
+  color: #262b3d !important;
+  font-size: large;
+}
 
 
 @media (max-width: 961px) {    

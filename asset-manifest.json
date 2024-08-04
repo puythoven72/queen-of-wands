@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/queen-of-wands/static/css/main.46570431.css",
+    "main.css": "/queen-of-wands/static/css/main.40cb9061.css",
     "main.js": "/queen-of-wands/static/js/main.57b0f250.js",
     "static/media/backround.gif": "/queen-of-wands/static/media/backround.bf3004de10bae923f5ea.gif",
     "static/media/tarotBack.png": "/queen-of-wands/static/media/tarotBack.7ace28db07e5f1c6352e.png",
@@ -15,13 +15,14 @@
     "static/media/kidstar-regular-webfont.woff": "/queen-of-wands/static/media/kidstar-regular-webfont.56fb7e5ca6c386970d8d.woff",
     "static/media/kidstar-regular-webfont.woff2": "/queen-of-wands/static/media/kidstar-regular-webfont.0c8c23b133be787e09f2.woff2",
     "static/media/logo.png": "/queen-of-wands/static/media/logo.c5611d923f6f29e419f9.png",
+    "static/media/waterMark.png": "/queen-of-wands/static/media/waterMark.24f2f2f5ef55bdefbb62.png",
     "static/media/Tinycrown.png": "/queen-of-wands/static/media/Tinycrown.50807093d88cf93d8b5a.png",
     "index.html": "/queen-of-wands/index.html",
-    "main.46570431.css.map": "/queen-of-wands/static/css/main.46570431.css.map",
+    "main.40cb9061.css.map": "/queen-of-wands/static/css/main.40cb9061.css.map",
     "main.57b0f250.js.map": "/queen-of-wands/static/js/main.57b0f250.js.map"
   },
   "entrypoints": [
-    "static/css/main.46570431.css",
+    "static/css/main.40cb9061.css",
     "static/js/main.57b0f250.js"
   ]
 }

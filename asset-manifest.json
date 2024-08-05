@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/queen-of-wands/static/css/main.d2a34a36.css",
-    "main.js": "/queen-of-wands/static/js/main.b47c1553.js",
+    "main.js": "/queen-of-wands/static/js/main.51a2b32e.js",
     "static/media/backround.gif": "/queen-of-wands/static/media/backround.bf3004de10bae923f5ea.gif",
     "static/media/tarotBack.png": "/queen-of-wands/static/media/tarotBack.7ace28db07e5f1c6352e.png",
     "static/media/currentEvent.png": "/queen-of-wands/static/media/currentEvent.b891589db1d67ff6d8a9.png",
@@ -19,10 +19,10 @@
     "static/media/Tinycrown.png": "/queen-of-wands/static/media/Tinycrown.50807093d88cf93d8b5a.png",
     "index.html": "/queen-of-wands/index.html",
     "main.d2a34a36.css.map": "/queen-of-wands/static/css/main.d2a34a36.css.map",
-    "main.b47c1553.js.map": "/queen-of-wands/static/js/main.b47c1553.js.map"
+    "main.51a2b32e.js.map": "/queen-of-wands/static/js/main.51a2b32e.js.map"
   },
   "entrypoints": [
     "static/css/main.d2a34a36.css",
-    "static/js/main.b47c1553.js"
+    "static/js/main.51a2b32e.js"
   ]
 }

@@ -9,40 +9,40 @@ function SplashPage(props) {
 
     };
     return (
-        <Container className="splashContainer mt-5">
-            <Row className="d-flex align-items-center justify-content-center text-center">
+        <Container className="splashContainer ">
+            <Row className="d-flex align-items-center justify-content-center text-center pt-2">
                 <Col>
                     <h1 className="splashTitle  d-flex justify-content-center text-center" >
-                        Queen Of Wands Tarot Advising
+                        QUEEN OF WANDS TAROT ADVISING
                     </h1>
                 </Col>
             </Row>
 
 
             <Row >
-                <Col className="splashTextLoc  ">
+                <Col className="splashTextLoc">
                     <Row className="text-center">
                         <Col>
-                            <Link to="/services" className="splashFont" onClick={event => updateNav(event, "/services")}>Services</Link>
+                            <Link to="/services" className="splashFont" onClick={event => updateNav(event, "/services")}>SERVICES</Link>
                         </Col>
 
                     </Row>
                     <Row className=" text-center">
                         <Col>
-                            <Link to="/about" className="splashFont" onClick={event => updateNav(event, "/about")}>About</Link>
+                            <Link to="/about" className="splashFont" onClick={event => updateNav(event, "/about")}>ABOUT</Link>
                         </Col>
 
                     </Row>
                     <Row className="  text-center">
                         <Col>
-                            <Link to="/events" className="splashFont" onClick={event => updateNav(event, "/events")}>Events</Link>
+                            <Link to="/events" className="splashFont" onClick={event => updateNav(event, "/events")}>EVENTS</Link>
                         </Col>
 
                     </Row>
                     <Row className="text-center pb-2">
                         <Col >
 
-                            <Link to="/contact" className="splashFont" onClick={event => updateNav(event, "/contact")}>Contact</Link>
+                            <Link to="/contact" className="splashFont" onClick={event => updateNav(event, "/contact")}>CONTACT</Link>
                         </Col>
                     </Row>
                 </Col>

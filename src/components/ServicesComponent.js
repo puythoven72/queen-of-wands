@@ -7,14 +7,14 @@ function ServicesComponent(props) {
    return (
       <Container >
 
-         <Row className="mt-5">
+         <Row className="mt-2">
             <Col >
                <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center">
-                  Queen Of Wands Tarot Services
+                  QUEEN OF WANDS TAROT SERVICES
                </h1>
             </Col>
          </Row>
-         <Row className="mt-3">
+         <Row className="mt-3 ">
 
             <Cards activeLink={props.activeLink} setActiveLink={props.setActiveLink}/>
          </Row>

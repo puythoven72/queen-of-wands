@@ -16,6 +16,21 @@
 
 }
 
+
+@font-face {
+  font-family: 'kidstarregular';
+  src: url('./assets/fonts/kidstar/kidstar-regular-webfont.woff2') format('woff2'),
+       url('./assets/fonts/kidstar/kidstar-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.footerPadding{
+margin-bottom: 80px;
+
+}
+
 /* c8b568 */
 /* 
 #C7AE6A
@@ -82,8 +97,8 @@ nav a.nav-link {
  
 
   .navBarBrand {
-    font-family: 'kaushan_scriptregular', Arial, sans-serif;
-    font-family: 'kaushan_scriptregular', Arial, sans-serif;
+    font-family: 'kidstarregular', Arial, sans-serif;
+    /* font-family: 'kaushan_scriptregular', Arial, sans-serif; */
       color: #d5c28f;
       font-size: 2rem;
       text-shadow: 0 0 5px #c8b568, 0 0 7px #000000;  
@@ -92,7 +107,8 @@ nav a.nav-link {
 
  
     .navLink{
-      font-family: 'kaushan_scriptregular', Arial, sans-serif;
+      font-family: 'kidstarregular', Arial, sans-serif;
+      font-size:x-large;
       /* color: #78c0de; */
     }
 
@@ -102,9 +118,14 @@ nav a.nav-link {
     }
 
 
+    .queenFont{
+      font-family: 'kidstarregular', Arial, sans-serif;
+    }
+
+
     .footer{
      
-      position:relative;
+      position:fixed;
       left:0;
       bottom:0;
       right:0;
@@ -171,7 +192,7 @@ nav a.nav-link {
 
 
 .splashFont{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  font-family: 'kidstarregular', Arial, sans-serif;
   color: #262b3d;  
   font-size: xx-large;
    text-shadow: 0 0 3px #262b3d, 0 0 7px #c8b568;  
@@ -191,38 +212,63 @@ a.splashFont:hover {
 
 /* c8b568 */
 .splashTitle{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+  font-family: 'kidstarregular', Arial, sans-serif;
       /* 40px/16=2.5em */
-       color: #262b3d; 
+  color: #b99a45; 
        /* 3A415C  */
-      font-size: 4rem;
+  font-size: 3rem;
   text-shadow: 0 0 5px #d5c28f, 0 0 7px #262b3d;  
-  border-top: 3px solid #c8b568;
-  border-bottom: 3px solid #c8b568;
+  text-shadow: 0 0 5px #000, 0 0 7px #000;  
+  border-top: 3px solid #4e577b;
+  border-bottom: 3px solid #4e577b;
   padding: 2px;
 }
 
 
 .aboutText{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
+
   font-size:large;
   color: #d5c28f;
   background: rgba(78, 87, 123, 0.7);
   background: rgba(58,65,92, 0.7);
+  /* color: #262b3d;
+  background: rgba(199,174,106, 0.7);
+  background: rgba(185,154,69, 0.7); */
+
 }
 
 .btn-custom {
   background-color: #b99a45 !important;
-color: #262b3d !important;
+  color: #262b3d !important;
+  font-family: 'kidstarregular', Arial, sans-serif !important;
+  font-size: large;
+  font-weight: bold !important;
+  border-color: #282c34!important;
 }
 
 .btn-custom:hover{
  
   background-color: #c8b568 !important;
   color: #262b3d !important;
-  font-size: large;
+  font-family: 'kidstarregular', Arial, sans-serif !important;
+  font-weight: bolder !important;
+  border-color: #282c34!important;
 }
 
+
+/* @media (min-width: 1024px) and (min-height: 600px){ 
+  .splashTextLoc{
+    padding-bottom:  90px;
+  
+}
+}
+
+@media (min-width: 1080px) and (min-height: 800px){ 
+  .splashTextLoc{
+    padding-bottom:  30px;
+  
+}
+} */
 
 @media (max-width: 961px) {    
  
@@ -237,24 +283,65 @@ color: #262b3d !important;
   .splashTitle{
     font-size: 3rem;
   } 
-
 }
 
 
 @media (max-width: 576px ) {    
  
   .navBarBrand {
-   
     font-size: 1rem;
+    }
+
+    .splashFont{
+      font-size: x-large;
     }
 
 }
 
+/* @media (max-width: 540px ) {    
+ 
+  .splashTextLoc{
+    padding-bottom:  50px;
+  
+}
+}
 
+@media (max-width: 390px)   {    
+  
+  .splashTextLoc{
+    padding-bottom: 30px;
+  
+}
+
+
+} */
+
+
+/* @media (max-width: 375px)   {    
+  
+  .splashTextLoc{
+    padding-bottom:  70px;
+  
+}
+
+} */
+
+/* @media (min-width: 375px) and (min-height: 667){ 
+  .splashTextLoc{
+    padding-bottom:  70px;
+  
+}
+}
 
 
   
-
+@media (max-width: 360px)   {    
+  
+  .splashTextLoc{
+    padding-bottom:  50px;
+  
+}
+} */
 
 
 

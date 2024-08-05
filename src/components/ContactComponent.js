@@ -116,10 +116,10 @@ function ContactComponent() {
             <Container>
                
 
-                <Row className="mt-5  d-flex align-items-center justify-content-center text-center">
+                <Row className="mt-2  d-flex align-items-center justify-content-center text-center">
                     <Col className="">
                         <h1 className="splashTitle ">
-                            Contact Queen Of Wands
+                            CONTACT QUEEN OF WANDS
                         </h1>
                     </Col>
                 </Row>
@@ -219,8 +219,8 @@ function ContactComponent() {
 
 
 
-                        <Button variant="" type="submit" className="mb-5 btn-custom " >
-                            Submit
+                        <Button variant="" type="submit" className="mb-5 btn-custom "  style={{ fontFamily: 'Roboto' }}>
+                            SUBMIT
                         </Button>
                         {/* <Row className="mt-2 baseText">
                             <Col>

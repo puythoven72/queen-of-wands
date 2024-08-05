@@ -61,13 +61,13 @@ function HeaderComponent(props) {
          
             }}
           >
-            <Nav.Item className="navTitle">
+            <Nav.Item >
               <Nav.Link
                 href="/home" eventKey="/home"
 
                 id="/home"
               >
-                Home
+                HOME
               </Nav.Link>
             </Nav.Item>
 
@@ -75,7 +75,7 @@ function HeaderComponent(props) {
               <Nav.Link href="/services" eventKey="/services"
 
                 id="/services"
-              >Services
+              >SERVICES
               </Nav.Link>
             </Nav.Item>
 
@@ -83,7 +83,7 @@ function HeaderComponent(props) {
               <Nav.Link href="/about" eventKey="/about"
 
                 id="/about"
-              >About
+              >ABOUT
               </Nav.Link>
             </Nav.Item>
 
@@ -91,14 +91,14 @@ function HeaderComponent(props) {
               <Nav.Link href="/events" eventKey="/events"
 
                 id="/events"
-              >Events</Nav.Link>
+              >EVENTS</Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link href="/contact" eventKey="/contact"
 
                 id="/contact"
-              >Contact</Nav.Link>
+              >CONTACT</Nav.Link>
             </Nav.Item>
 
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

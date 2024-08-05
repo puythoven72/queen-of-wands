@@ -18,7 +18,7 @@ function App() {
         <Router>
         
         <HeaderComponent  activeLink={activeLink} setActiveLink={setActiveLink}/>
-        <div >
+        <div className='footerPadding'>
           <Routes>
             <Route path="/" element={<HomeComponent activeLink={activeLink} setActiveLink={setActiveLink}/>} />
             <Route path="/home" element={<HomeComponent activeLink={activeLink} setActiveLink={setActiveLink}/>} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="/contact" element={<ContactComponent />} />
             <Route path="/events" element={<EventsComponent />} />
           </Routes>
-          </div>
+        </div>
          
         </Router>
       <Footer/>

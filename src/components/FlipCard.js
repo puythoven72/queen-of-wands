@@ -24,7 +24,7 @@ const FlipCard = ({ imageUrl, name, description,setActiveLink }) => {
     <div className="car-card d-flex m-1" >
       <ReactCardFlip
         isFlipped={isFlipped}
-        flipDirection="vertical"
+        flipDirection="horizontal"
 
       >
         {/* Front side*/}
@@ -66,15 +66,15 @@ const FlipCard = ({ imageUrl, name, description,setActiveLink }) => {
         {/* Back side */}
 
         <Card className="text-center cardHeader " onClick={handleClick}>
-          <Card.Header className="" style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>Queen Of Wands</Card.Header>
+          <Card.Header className="queenFont" style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>QUEEN OF WANDS</Card.Header>
           <Card.Body className="" style={{background :"rgba(78, 87, 123, 0.7)"}}>
             <Card.Title className="cardTitle ">{name}</Card.Title>
             <Card.Text className="card-text ">
-              <div className="p-1" dangerouslySetInnerHTML={{ __html: description }} />
+              <div className="" dangerouslySetInnerHTML={{ __html: description }} />
             </Card.Text>
-            <Button variant="primary" className="btn-custom" onClick={event => updateNav(event, "/contact")}>Make An Apppointment</Button>
+            <Button variant="primary" className="btn-custom" onClick={event => updateNav(event, "/contact")}>MAKE AN APPOINTMENT</Button>
           </Card.Body>
-          <Card.Footer style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>Tarot Advising</Card.Footer>
+          <Card.Footer className="queenFont" style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>TAROT ADVISING</Card.Footer>
         </Card>
 
         {/* <div className="card-back card-border text-center" onClick={handleClick}>

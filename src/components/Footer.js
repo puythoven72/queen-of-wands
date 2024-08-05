@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image';
 function Footer() {
     const year = new Date().getFullYear();
     return (
-        <footer className="footer  mt-5  "  >
+        <footer className="footer "  >
             <Container fluid className='pt-3'>
                 <Row className='d-flex align-bottom  text-center'>
                     <Col >

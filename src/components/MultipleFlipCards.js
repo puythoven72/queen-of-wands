@@ -29,14 +29,13 @@ const cards = [
 
 function MultipleFlipCards(props) {
   const contactLink = props.activeLink;
-  console.log("active link is " + contactLink);
   return (
 
 
-    <Container>
+    <Container >
 
       <Row className='mt-2 ' >
-        <h5 className='d-flex align-items-center justify-content-center cardDirection'>(Click Card For More Information)</h5>
+        <h5 className='d-flex align-items-center justify-content-center cardDirections'>(CLICK CARD FOR DETAILS)</h5>
       </Row>
       <Row className='mt-2' >
         {cards.map((cards, index) => (

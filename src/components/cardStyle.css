@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal;
 
+}@font-face {
+  font-family: 'kidstarregular';
+  src: url('../assets/fonts/kidstar/kidstar-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/kidstar/kidstar-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 
@@ -18,6 +25,7 @@
   .car-card {
     width: 400px;
     height: 100%;
+    /* height: 52vh; */
     display: flex;
     align-items: center; 
     justify-content: center;
@@ -33,7 +41,7 @@
   }
 
   .card-front{
-    font-family: 'kaushan_scriptregular', Arial, sans-serif;
+    font-family: 'kidstarregular', Arial, sans-serif;
     background-image: url(/src/assets/images/tarotBack.png);
     background-size: cover;
     height: 52vh; 
@@ -45,8 +53,13 @@
     color: #c8b568; 
     /* text-shadow: 0 0 10px #000, 0 0 10px #000;   */
     text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
+    /* background-image: url(../assets/images/waterMark.png); */ 
+    /* background-color: #3A415C; */
   
   }
+
+
+
 
  /* .splashFont:hover {
     cursor: pointer;
@@ -65,6 +78,7 @@
     /* text-shadow: 0 0 3px #326f8c, 0 0 7px #edac0e; 
     text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;   */
     text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
+    width: 30vh; 
   } 
 
   .card-backTest{
@@ -73,15 +87,15 @@
   
   }
   .card-text { 
-      height: 32vh; 
+      height: 28vh; 
     width: 30vh; 
-    overflow-y: scroll; 
+    overflow-y: auto; 
     border-radius: 10px;
     padding: 5px;
     color: black;
     text-shadow: black solid;
-   
-    background-image: url(../assets/images/logo.png);
+    
+    background-image: url(../assets/images/waterMark.png);
     background-repeat: no-repeat;
     background-position:center;
     /* background: rgba(78, 87, 123, 0.7)!important; */
@@ -91,7 +105,8 @@
   }
 
   .card-back {
-    font-family: 'kaushan_scriptregular', Arial, sans-serif;
+   
+    font-family: 'kidstarregular', Arial, sans-serif;
     display: flex; 
     overflow-y: auto;
   
@@ -115,9 +130,11 @@
     background-clip: content-box, padding-box;
   }
 
-.cardDirection{
-  font-family: 'kaushan_scriptregular', Arial, sans-serif;
-  color: #3A415C;
+.cardDirections{
+  font-family: 'kidstarregular', Arial, sans-serif;
+  color: #b99a45;
+  font-weight: bolder;
+  text-shadow: 0 0 3px #000, 0 0 7px #000;  
 }
 
    .car-card img {
@@ -154,10 +171,12 @@
       align-items: center; 
     justify-content: center;
     /* border: 1px solid #ccc; */
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     }
 
-    .card-back {
+    /* .card-back {
       padding: 5px;
-    }
+    }  .cardTitle {
+      padding: 5px;
+    } */
   }

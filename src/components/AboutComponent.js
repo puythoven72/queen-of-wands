@@ -15,10 +15,10 @@ function AboutComponent() {
 
         <Container  >
 
-            <Row className="mt-5">
+            <Row className="mt-2">
                 <Col >
                     <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center mb-3">
-                       About Queen Of Wands Tarot Advising
+                       ABOUT QUEEN OF WANDS TAROT ADVISING
                     </h1>
                 </Col>
             </Row>

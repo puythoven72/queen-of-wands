@@ -125,7 +125,7 @@ function ContactComponent() {
                 </Row>
             </Container>
 
-            < Container className="mt-5 p-2 d-flex align-items-center justify-content-center text-center " >
+            < Container className="mt-2 p-2 d-flex align-items-center justify-content-center text-center " >
 
 
                 <Row  >

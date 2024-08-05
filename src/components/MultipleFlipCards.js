@@ -34,7 +34,7 @@ function MultipleFlipCards(props) {
 
     <Container >
 
-      <Row className='mt-2 ' >
+      <Row  >
         <h5 className='d-flex align-items-center justify-content-center cardDirections'>(CLICK CARD FOR DETAILS)</h5>
       </Row>
       <Row className='mt-2' >

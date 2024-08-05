@@ -27,7 +27,7 @@
 }
 
 .footerPadding{
-margin-bottom: 80px;
+margin-bottom: 95px;
 
 }
 
@@ -132,6 +132,12 @@ nav a.nav-link {
       background-color: #262b3d; 
       color: #c8b568;
     }
+
+    footer a:link {
+  color:#c8b568;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {

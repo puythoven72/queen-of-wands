@@ -14,7 +14,7 @@ function ServicesComponent(props) {
                </h1>
             </Col>
          </Row>
-         <Row className="mt-3 ">
+         <Row className="mt-2 ">
 
             <Cards activeLink={props.activeLink} setActiveLink={props.setActiveLink}/>
          </Row>

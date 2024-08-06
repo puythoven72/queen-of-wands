@@ -9,7 +9,7 @@ import StringUtility from './utility/StringUtility';
 
 
 const cards = [
-  
+
   {
     imageUrl: "../assets/images/tarotBack.png",
     name: StringUtility.SERVICE1,
@@ -28,12 +28,10 @@ const cards = [
 ];
 
 function MultipleFlipCards(props) {
-  const contactLink = props.activeLink;
+
   return (
 
-
     <Container >
-
       <Row  >
         <h5 className='d-flex align-items-center justify-content-center cardDirections'>(CLICK CARD FOR DETAILS)</h5>
       </Row>
@@ -47,7 +45,6 @@ function MultipleFlipCards(props) {
               name={cards.name}
               description={cards.description}
               setActiveLink={props.setActiveLink}
-           
             />
 
           </Col>

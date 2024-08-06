@@ -25,7 +25,7 @@
   .car-card {
     width: 400px;
     height: 100%;
-    /* height: 52vh; */
+   
     display: flex;
     align-items: center; 
     justify-content: center;
@@ -47,11 +47,11 @@
     height: 52vh; 
     width: 30vh;
     border-radius: 10px;
-   background-position: center;
-  background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;   
     color: #c8b568; 
-    /* text-shadow: 0 0 10px #000, 0 0 10px #000;   */
+   
     text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
     /* background-image: url(../assets/images/waterMark.png); */ 
     /* background-color: #3A415C; */
@@ -59,24 +59,13 @@
   }
 
 
-
-
- /* .splashFont:hover {
-    cursor: pointer;
-    color: #326f8c;
-  } */
-  
-
 .cardHeader{
   background-color: rgba(58,65,92, 0.7);
-  /* height: 35vh; 
-  width: 30vh;  */
+
 }
 
   .cardTitle{
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
-    /* text-shadow: 0 0 3px #326f8c, 0 0 7px #edac0e; 
-    text-shadow: 0 0 5px #61dafb, 0 0 7px #fff;   */
     text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
     width: 30vh; 
   } 
@@ -94,41 +83,12 @@
     padding: 5px;
     color: black;
     text-shadow: black solid;
-    
     background-image: url(../assets/images/waterMark.png);
     background-repeat: no-repeat;
     background-position:center;
-    /* background: rgba(78, 87, 123, 0.7)!important; */
-    /* color: #3A415C; */
-    /* background-image: linear-gradient(to bottom,  rgba(185, 154, 69, 0.7) 10%,  rgba(185, 154, 69, 2.7) 90%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%); */
-    /* background-clip: content-box, padding-box; */
   }
 
-  .card-back {
-   
-    font-family: 'kidstarregular', Arial, sans-serif;
-    display: flex; 
-    overflow-y: auto;
   
-    /* border-radius: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    justify-content: center;
-    align-items: center */
-    /* justify-content: center;
-    align-items: center; */
-    color: #3A415C;
-    border-radius: 10px;
-    height: 52vh; 
-    width: 30vh;
-    /* padding: 10px; */
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    background-image: linear-gradient(to bottom,  rgba(185, 154, 69, 0.7) 10%,  rgba(185, 154, 69, 2.7) 90%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
-    background-clip: content-box, padding-box;
-  }
 
 .cardDirections{
   font-family: 'kidstarregular', Arial, sans-serif;
@@ -155,9 +115,7 @@
 .aboutImage {
   border-radius: 10px;
   margin-top: 1rem;
-  /* width: 50%;
-  height: 150px;
-  padding: 10px 10px 10px 10px; */
+
   background-color: #f5f5f5;
   border: 1px solid #000;
   /* Box Shadow */
@@ -169,14 +127,7 @@
       max-width: 100%;
       max-height: 100%;
       align-items: center; 
-    justify-content: center;
-    /* border: 1px solid #ccc; */
-    /* margin-bottom: 5px; */
+      justify-content: center;
+  
     }
-
-    /* .card-back {
-      padding: 5px;
-    }  .cardTitle {
-      padding: 5px;
-    } */
   }

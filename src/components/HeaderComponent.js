@@ -32,19 +32,15 @@ function HeaderComponent(props) {
 
 
 
-
-
-  //78c0de
-  //eec986
   return (
     <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#c8b568" }}>
       <Container fluid style={{ backgroundColor: "#3A415C" }} >
 
-        <Navbar.Brand href="/" >
+        <Navbar.Brand href="/home" >
 
           <div className="navBarBrand ">
-            <Image src={logo}  />
-           
+            <Image src={logo} />
+
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -58,7 +54,7 @@ function HeaderComponent(props) {
             onSelect={(selectedKey, event) => {
               event.preventDefault();
               props.setActiveLink(selectedKey);
-         
+
             }}
           >
             <Nav.Item >
@@ -100,26 +96,9 @@ function HeaderComponent(props) {
                 id="/contact"
               >CONTACT</Nav.Link>
             </Nav.Item>
-
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
 
-
-
-
         </Navbar.Collapse>
-
-
       </Container>
     </Navbar>
 

@@ -48,7 +48,6 @@ function SplashPage(props) {
                 </Col>
             </Row>
         </Container>
-
     );
 
 }

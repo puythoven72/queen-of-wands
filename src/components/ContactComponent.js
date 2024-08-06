@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import Input from 'react-phone-number-input/input'
 import Form from 'react-bootstrap/Form';
@@ -214,24 +214,10 @@ function ContactComponent() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-
-
-
-
-
                         <Button variant="" type="submit" className="mb-5 btn-custom "  style={{ fontFamily: 'Roboto' }}>
                             SUBMIT
                         </Button>
-                        {/* <Row className="mt-2 baseText">
-                            <Col>
-
-                                <Mailto email="jensVarrage@gmail.com" subject="Subject" body={"Hello, Im interested in the "} >
-                                    <span className="" style={{ textDecoration: "none" }}>  Interested? Mail me!</span>
-                                </Mailto>
-                            </Col>
-                        </Row> */}
                     </Form>
-
                 </Row>
 
 

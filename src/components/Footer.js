@@ -1,6 +1,5 @@
 import '../App.css';
 import { Container, Row, Col } from "react-bootstrap";
-import instagram from '../assets/images/instagram.png'
 import email from '../assets/images/email.png'
 import Image from 'react-bootstrap/Image';
 
@@ -18,24 +17,19 @@ function Footer() {
         <footer className="footer "  >
             <Container fluid className='pt-3 '>
                 <Row className='d-flex align-bottom  text-center queenFont'>
-                    {/* <Col >
 
-                        <span class="align-center">Find Me On Instagram</span> <Image fluid src={instagram}
-
-                        />
-                    </Col> */}
                     <Col>
-                        
+
                         <Mailto email="QueenofwandsTa@gmail.com" subject="Subject" body={""} >
                             <Image src={email}></Image>
                             <span class="align-bottom px-1"> EMAIL ME! </span>
                         </Mailto>
-                        {/* <a href='https://dryicons.com/free-icons/email'> Icon by Dryicons </a> */}
+
                     </Col>
                 </Row>
                 <Row className='d-flex align-bottom  text-center'>
                     <Col >
-                    <small><small><a href='https://dryicons.com/free-icons/email'> Icon by Dryicons </a></small></small>
+                        <small><small><a href='https://dryicons.com/free-icons/email'> Icon by Dryicons </a></small></small>
                     </Col>
                 </Row>
                 <Row className='p-2'>

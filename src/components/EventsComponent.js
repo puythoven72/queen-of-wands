@@ -18,6 +18,7 @@ function EventsComponent() {
                 <Col className="d-flex align-items-center justify-content-center text-center ">
                     <Image src={currentEvent} thumbnail 
                     style={{ borderRadius: '15px' ,border: '1px solid black'}}
+                    alt="Current Event"
                     />
                 </Col>
 

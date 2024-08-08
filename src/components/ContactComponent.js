@@ -114,7 +114,7 @@ function ContactComponent() {
     return (
         <>
             <Container>
-               
+
 
                 <Row className="mt-2  d-flex align-items-center justify-content-center text-center">
                     <Col className="">
@@ -126,18 +126,15 @@ function ContactComponent() {
             </Container>
 
             < Container className="mt-2 p-2 d-flex align-items-center justify-content-center text-center " >
-
-
                 <Row  >
-
-                <>
-                    {submitStatus != null ?
-                        <Alert key={alertVariant} variant={alertVariant} className="mt-2">
-                            {messageDisplay}
-                        </Alert>
-                        : null
-                    }
-                </>
+                    <>
+                        {submitStatus != null ?
+                            <Alert key={alertVariant} variant={alertVariant} className="mt-2">
+                                {messageDisplay}
+                            </Alert>
+                            : null
+                        }
+                    </>
                     <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 aboutText" style={{ borderRadius: '15px', border: '1px solid black' }}>
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
@@ -158,8 +155,6 @@ function ContactComponent() {
                             <Form.Text className="text-muted">
                             </Form.Text>
                         </Form.Group>
-
-
 
                         <Form.Group className="m-3" controlId="formBasicEmail">
                             <span style={{ color: "red" }}>*</span>
@@ -201,8 +196,8 @@ function ContactComponent() {
                         </Form.Group>
 
                         <Form.Group className="m-3" controlId="exampleForm.ControlTextarea1">
-                            <span style={{ color: "red" }}>*</span>
-                            <Form.Label className="">Message (200 Characters) Please include details about services you are interested in.</Form.Label>
+                            
+                            <Form.Label><span style={{ color: "red" }}>*</span>Message (200 Characters) Please include details about services you are interested in.</Form.Label>
                             <Form.Control as="textarea" rows={3}
                                 required
                                 name='message'
@@ -214,9 +209,17 @@ function ContactComponent() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Button variant="" type="submit" className="mb-5 btn-custom "  style={{ fontFamily: 'Roboto' }}>
-                            SUBMIT
-                        </Button>
+
+                        <Row >
+                            <Col    >
+                                <Button variant="" type="submit" className="mb-5 btn-custom " size="lg" >
+                                    SUBMIT
+                                </Button>
+                            </Col>
+
+
+                        </Row>
+
                     </Form>
                 </Row>
 

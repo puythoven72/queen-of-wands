@@ -37,7 +37,7 @@ const FlipCard = ({ name, description, setActiveLink }) => {
         
           }}
         >
-          <Row className="pt-2">
+          <Row className="pt-3">
             <Col >
               <Image fluid src={logo} className=""></Image>
             </Col>

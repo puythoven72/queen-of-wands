@@ -50,11 +50,11 @@
   }
 
   .card-front:hover{
-    border: solid #c8b568 3px;
+    border: solid #262b3d 3px;
     font-size: large;
     font-weight: bold;
     text-shadow: 0 0 5px #000, 0 0 7px #000000;  
-    border: solid #262b3d 3px;
+   
     
   }
 

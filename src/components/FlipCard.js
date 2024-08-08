@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import "./cardStyle.css";
 import { Button, Card } from "react-bootstrap";
-import { useNavigate, BrowserRouter as Router, } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import logo from '../assets/images/logo.png'
+import Image from 'react-bootstrap/Image';
+import { Container, Row, Col } from "react-bootstrap";
 
-
-const FlipCard = ({ imageUrl, name, description, setActiveLink }) => {
+const FlipCard = ({ name, description, setActiveLink }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const navigate = useNavigate();
   const handleClick = () => {
@@ -13,42 +15,56 @@ const FlipCard = ({ imageUrl, name, description, setActiveLink }) => {
   };
 
   function updateNav(e, navItem) {
-    console.log("in the thing");
+
     setActiveLink(navItem);
     navigate(navItem);
 
   };
 
   return (
-    <div className="car-card d-flex m-1" >
+    <div className="car-card text-center "  >
       <ReactCardFlip
         isFlipped={isFlipped}
         flipDirection="horizontal"
-
+        
       >
         {/* Front side*/}
-        <div
-          className="card-front d-flex align-items-center justify-content-center text-center card-border"
+        <Container
+          className="card-front "
           onClick={handleClick}
           style={{
             cursor: "pointer"
+        
           }}
         >
-          <div >
-            <h2>{name}</h2>
-          </div>
+          <Row className="pt-2">
+            <Col >
+              <Image fluid src={logo} className=""></Image>
+            </Col>
+          </Row>
+          <Row className="pt-5">
+            <Col >
+              <h2>{name}</h2>
+            </Col>
+          </Row>
+          <Row  >
+            <Col className="pt-2">
+              <p>(CLICK CARD FOR DETAILS)</p>
+            </Col>
+          </Row>
+        </Container>
 
-        </div>
+       
 
 
         {/* Back side */}
 
-        <Card className="text-center cardHeader " onClick={handleClick}>
+        <Card onClick={handleClick}>
           <Card.Header className="queenFont" style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>QUEEN OF WANDS</Card.Header>
-          <Card.Body className="" style={{ background: "rgba(78, 87, 123, 0.7)" }}>
-            <Card.Title className="cardTitle ">{name}</Card.Title>
-            <Card.Text className="card-text ">
-              <div className="" dangerouslySetInnerHTML={{ __html: description }} />
+          <Card.Body style={{ background: "rgba(78, 87, 123, 0.7)" }}>
+            <Card.Title className=" cardTitle">{name}</Card.Title>
+            <Card.Text >
+              <div  dangerouslySetInnerHTML={{ __html: description }} />
             </Card.Text>
             <Button variant="primary" className="btn-custom" onClick={event => updateNav(event, "/contact")}>MAKE AN APPOINTMENT</Button>
           </Card.Body>

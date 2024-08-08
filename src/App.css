@@ -27,7 +27,7 @@
 }
 
 .footerPadding{
-margin-bottom: 95px;
+margin-bottom: 115px;
 
 }
 
@@ -133,11 +133,11 @@ nav a.nav-link {
       color: #c8b568;
     }
 
-    footer a:link {
-  color:#c8b568;
-  background-color: transparent;
-  text-decoration: none;
-}
+  footer a:link {
+    color:#c8b568;
+    background-color: transparent;
+    text-decoration: none;
+  }
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -156,22 +156,6 @@ nav a.nav-link {
   color: white;
 }
 
-
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* .main {
-
-  background-image: url(/src/assets/images/bkround_crown.png);
- height: 70vh; 
-   background-position: center;
-  background-repeat: no-repeat;
-    background-size: cover;   
-   background-size: auto; 
-  
-} */
 
 
 .splashContainer {
@@ -259,6 +243,8 @@ a.splashFont:hover {
   font-family: 'kidstarregular', Arial, sans-serif !important;
   font-weight: bolder !important;
   border-color: #282c34!important;
+  font-size:large;
+  font-weight: bold;
 }
 
 

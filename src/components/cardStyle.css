@@ -11,81 +11,76 @@
        url('../assets/fonts/kidstar/kidstar-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 
-.car-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+
   
   .car-card {
-    width: 400px;
-    height: 100%;
-   
-    display: flex;
-    align-items: center; 
-    justify-content: center;
+    width: 350px;
+    height: 550px;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden; 
     transition: transform 0.5s;
+ 
   }
 
   .card-border{
-   
     box-shadow: 3px 3px 8px 0px #262b3d;
   }
 
   .card-front{
+ 
     font-family: 'kidstarregular', Arial, sans-serif;
-    background-image: url(/src/assets/images/tarotBack.png);
-    background-size: cover;
-    height: 52vh; 
-    width: 30vh;
     border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
+  
     color: #c8b568; 
-   
-    text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
-    /* background-image: url(../assets/images/waterMark.png); */ 
-    /* background-color: #3A415C; */
+    
+    width: 350px;
+    height: 550px;
+ 
+    background-image:  linear-gradient(to bottom, rgba(58, 65, 92, 1) 0%, rgba(58, 65, 92, 1) 100%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-clip: content-box, padding-box; 
+    padding: 10px;
   
   }
 
+  .card-front:hover{
+    border: solid #c8b568 3px;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: 0 0 5px #000, 0 0 7px #000000;  
+    border: solid #262b3d 3px;
+    
+  }
 
 .cardHeader{
   background-color: rgba(58,65,92, 0.7);
+  
 
 }
 
   .cardTitle{
     font-family: 'kaushan_scriptregular', Arial, sans-serif;
     text-shadow: 0 0 3px #d5c28f, 0 0 7px #000;  
-    width: 30vh; 
+    
   } 
 
-  .card-backTest{
-    background: rgba(78, 87, 123, 0.7);
-  
-  
-  }
+
   .card-text { 
-      height: 28vh; 
-    width: 30vh; 
+
+    height: 350px;
     overflow-y: auto; 
-    border-radius: 10px;
-    padding: 5px;
-    color: black;
-    text-shadow: black solid;
     background-image: url(../assets/images/waterMark.png);
-    background-repeat: no-repeat;
     background-position:center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    text-shadow: black solid;
+   
   }
 
   
@@ -122,12 +117,4 @@
   box-shadow: 1px 1px 10px 0px #d5c28f;
 }
 
-  @media(max-width:800px) {
-    .car-card {
-      max-width: 100%;
-      max-height: 100%;
-      align-items: center; 
-      justify-content: center;
-  
-    }
-  }
+

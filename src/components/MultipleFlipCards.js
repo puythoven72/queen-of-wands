@@ -32,19 +32,20 @@ function MultipleFlipCards(props) {
   return (
 
     <Container >
-      <Row  >
+      {/* <Row  >
         <h5 className='d-flex align-items-center justify-content-center cardDirections'>(CLICK CARD FOR DETAILS)</h5>
-      </Row>
-      <Row className='mt-2' >
+      </Row> */}
+      <Row className='text-center ' >
         {cards.map((cards, index) => (
 
-          <Col className=' d-flex align-items-center justify-content-center'>
+          <Col className='text-center d-flex align-items-center justify-content-center py-1'>
             <FlipCard
               key={index}
               imageUrl={cards.imageUrl}
               name={cards.name}
               description={cards.description}
               setActiveLink={props.setActiveLink}
+            
             />
 
           </Col>

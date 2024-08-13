@@ -4,10 +4,6 @@ import FlipCard from "./FlipCard";
 import { Container, Row, Col } from 'react-bootstrap';
 import StringUtility from './utility/StringUtility';
 
-
-
-
-
 const cards = [
 
   {
@@ -37,17 +33,14 @@ function MultipleFlipCards(props) {
       </Row> */}
       <Row className='text-center ' >
         {cards.map((cards, index) => (
-
-          <Col className='text-center d-flex align-items-center justify-content-center py-1'>
+          <Col key={index} className='text-center d-flex align-items-center justify-content-center py-1' >
             <FlipCard
-              key={index}
               imageUrl={cards.imageUrl}
               name={cards.name}
               description={cards.description}
               setActiveLink={props.setActiveLink}
-            
             />
-
+          
           </Col>
         ))}
       </Row>

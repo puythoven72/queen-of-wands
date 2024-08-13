@@ -53,18 +53,6 @@ function ContactComponent() {
     };
 
 
-    const Mailto = ({ email, subject = '', body = '', children }) => {
-        let params = subject || body ? '?' : '';
-        if (subject) params += `subject=${encodeURIComponent(subject)}`;
-        if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
-
-        return <a href={`mailto:${email}${params}`}>{children}</a>;
-    };
-
-
-
-
-
     const handleOnSubmit = (e) => {
         e.preventDefault();
         setValidated(false);
@@ -137,16 +125,15 @@ function ContactComponent() {
                     </>
                     <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 aboutText" style={{ borderRadius: '15px', border: '1px solid black' }}>
 
-                        <Form.Group className="m-3" controlId="formBasicEmail">
+                        <Form.Group className="m-3" controlId="from_name">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label className="">Name</Form.Label>
+                            <Form.Label>Name</Form.Label>
                             <Form.Control type="text"
                                 placeholder="Enter Name"
                                 required
                                 name='from_name'
                                 minLength="3"
                                 maxLength="30"
-
                             />
 
                             <Form.Control.Feedback type="invalid">
@@ -156,9 +143,9 @@ function ContactComponent() {
                             </Form.Text>
                         </Form.Group>
 
-                        <Form.Group className="m-3" controlId="formBasicEmail">
+                        <Form.Group className="m-3" controlId="from_email">
                             <span style={{ color: "red" }}>*</span>
-                            <Form.Label className="">Email address</Form.Label>
+                            <Form.Label>Email address</Form.Label>
                             <Form.Control type="email"
                                 placeholder="Enter Email"
                                 required
@@ -175,8 +162,8 @@ function ContactComponent() {
 
                         </Form.Group>
 
-                        <Form.Group className="m-3" controlId="formBasicEmail">
-                            <Form.Label className="">
+                        <Form.Group className="m-3" controlId="phone">
+                            <Form.Label>
                                 Phone Number
                             </Form.Label>
                             <Row>
@@ -195,7 +182,7 @@ function ContactComponent() {
 
                         </Form.Group>
 
-                        <Form.Group className="m-3" controlId="exampleForm.ControlTextarea1">
+                        <Form.Group className="m-3" controlId="message">
                             
                             <Form.Label><span style={{ color: "red" }}>*</span>Message (500 Characters) Please include details about services you are interested in.</Form.Label>
                             <Form.Control as="textarea" rows={3}
@@ -209,24 +196,16 @@ function ContactComponent() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-
                         <Row >
                             <Col    >
                                 <Button variant="" type="submit" className="mb-5 btn-custom " size="lg" >
                                     SUBMIT
                                 </Button>
                             </Col>
-
-
                         </Row>
 
                     </Form>
                 </Row>
-
-
-
-
-
 
             </Container>
         </>

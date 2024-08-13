@@ -22,7 +22,7 @@ function Footer() {
 
                         <Mailto email="QueenofwandsTa@gmail.com" subject="Subject" body={""} >
                             <Image src={email}></Image>
-                            <span class="align-bottom px-1"> EMAIL ME! </span>
+                            <span className="align-bottom px-1"> EMAIL ME! </span>
                         </Mailto>
 
                     </Col>

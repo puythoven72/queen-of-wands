@@ -22,7 +22,7 @@ const FlipCard = ({ name, description, setActiveLink }) => {
   };
 
   return (
-    <div className="car-card text-center "  >
+    <div className="car-card text-center "    >
       <ReactCardFlip
         isFlipped={isFlipped}
         flipDirection="horizontal"
@@ -49,13 +49,10 @@ const FlipCard = ({ name, description, setActiveLink }) => {
           </Row>
           <Row  >
             <Col className="pt-2">
-              <p>(CLICK CARD FOR DETAILS)</p>
+              <span>(CLICK CARD FOR DETAILS)</span>
             </Col>
           </Row>
         </Container>
-
-       
-
 
         {/* Back side */}
 
@@ -64,7 +61,7 @@ const FlipCard = ({ name, description, setActiveLink }) => {
           <Card.Body style={{ background: "rgba(78, 87, 123, 0.7)" }}>
             <Card.Title className=" cardTitle">{name}</Card.Title>
             <Card.Text >
-              <div  dangerouslySetInnerHTML={{ __html: description }} />
+              <span  dangerouslySetInnerHTML={{ __html: description }} />
             </Card.Text>
             <Button variant="primary" className="btn-custom" onClick={event => updateNav(event, "/contact")}>MAKE AN APPOINTMENT</Button>
           </Card.Body>

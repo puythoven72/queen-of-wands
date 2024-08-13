@@ -30,17 +30,12 @@ function AboutComponent() {
                             className="aboutImage"
                             alt="Image of the queen of wands"
                         />
-
-
                     </Col>
 
 
                     <Col className="text-center p-3  d-flex align-items-center">
-                        {/* <p>{StringUtility.ABOUT}</p> */}
-
-                        <div className="p-1" dangerouslySetInnerHTML={{ __html: StringUtility.ABOUT }} />
+                        <span className="p-1" dangerouslySetInnerHTML={{ __html: StringUtility.ABOUT }} />
                     </Col>
-
                 </Row>
             </div>
 

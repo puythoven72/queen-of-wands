@@ -1,4 +1,7 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
+import {  Button } from "react-bootstrap";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from "react";
 import Input from 'react-phone-number-input/input'
 import Form from 'react-bootstrap/Form';

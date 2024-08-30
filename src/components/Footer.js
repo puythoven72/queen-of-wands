@@ -1,5 +1,7 @@
 import '../App.css';
-import { Container, Row, Col } from "react-bootstrap";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import email from '../assets/images/email.png'
 import Image from 'react-bootstrap/Image';
 

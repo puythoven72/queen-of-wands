@@ -1,7 +1,7 @@
-import { useNavigate, NavLink, BrowserRouter as Router, } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React from "react";
-import { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import {  useEffect } from "react";
+import { Container} from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from '../assets/images/logo.png'

@@ -5,7 +5,9 @@ import { Button, Card } from "react-bootstrap";
 import { useNavigate} from "react-router-dom";
 import logo from '../assets/images/logo.png'
 import Image from 'react-bootstrap/Image';
-import { Container, Row, Col } from "react-bootstrap";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const FlipCard = ({ name, description, setActiveLink }) => {
   const [isFlipped, setIsFlipped] = useState(false);

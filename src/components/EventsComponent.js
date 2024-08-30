@@ -1,4 +1,6 @@
-import { Row, Col, Container } from "react-bootstrap";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
 //import currentEvent from "../assets/images/currentEvent.png";
 import { useEffect, useState } from "react";
@@ -39,7 +41,7 @@ function EventsComponent() {
             </Row>
             <Row className="mt-2 " >
                 <Col className="d-flex align-items-center justify-content-center text-center" id="imageCol">
-                    <Image src={eventImgSrc} 
+                    <Image src={eventImgSrc} thumbnail
                         style={{ borderRadius: '15px', border: '1px solid black' }}
                         alt="Current Event"
                     />

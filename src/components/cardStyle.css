@@ -73,7 +73,7 @@
 
   .card-text { 
 
-    height: 350px;
+    height: 330px;
     overflow-y: auto; 
     background-image: url(../assets/images/waterMark.png);
     background-position:center;

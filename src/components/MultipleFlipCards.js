@@ -1,7 +1,9 @@
 
 import './cardStyle.css';
 import FlipCard from "./FlipCard";
-import { Container, Row, Col } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import StringUtility from './utility/StringUtility';
 
 const cards = [
@@ -21,6 +23,12 @@ const cards = [
     name: StringUtility.SERVICE3,
     description: StringUtility.SERVICE3_DESCRIPTION,
   },
+  {
+    imageUrl: "../assets/images/tarotBack.png",
+    name: StringUtility.SERVICE4,
+    description: StringUtility.SERVICE4_DESCRIPTION,
+  },
+ 
 ];
 
 function MultipleFlipCards(props) {

@@ -4,9 +4,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import email from '../assets/images/email.png'
 import Image from 'react-bootstrap/Image';
+import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer(props) {
     const year = new Date().getFullYear();
+
+    function updateNav(e, navItem) {
+        props.setActiveLink(navItem);
+
+    };
 
     const Mailto = ({ email, subject = '', body = '', children }) => {
         let params = subject || body ? '?' : '';
@@ -34,10 +40,14 @@ function Footer() {
                         <small><small><a href='https://dryicons.com/free-icons/email'> Icon by Dryicons </a></small></small>
                     </Col>
                 </Row>
+
                 <Row className='p-2'>
                     <Col className='d-flex align-items-center justify-content-center text-center'>
-                        <small> <small> {`Copyright © Queen Of Wands Tarot Advising, LTD  ${year}`}</small></small>
+                        <small> <small> {`Copyright © Queen Of Wands Tarot Advising, LTD  ${year}`} </small></small>
+                        <small>&nbsp; | &nbsp;</small>
+                        <small>  <Link to="/TermsOfService"  onClick={event => updateNav(event, "/TermsOfService")}>Terms of Services</Link></small>
                     </Col>
+                  
                 </Row>
 
             </Container>

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import {  useEffect } from "react";
-import { Container} from "react-bootstrap";
+import { useEffect } from "react";
+import Container from 'react-bootstrap/Container';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from '../assets/images/logo.png'
@@ -23,11 +23,15 @@ function HeaderComponent(props) {
     document.getElementById("/contact").classList.remove('active');
     document.getElementById("/events").classList.remove('active');
 
-    //navigate to the selected link
-    navigate(props.activeLink);
+    if (props.activeLink !== "/TermsOfService") {
+      //navigate to the selected link
+      navigate(props.activeLink);
 
-    //mark selected link as active
-    document.getElementById(props.activeLink).classList.add('active');
+      //mark selected link as active
+      document.getElementById(props.activeLink).classList.add('active');
+
+    }
+
   }, [props.activeLink]);
 
 
@@ -45,7 +49,6 @@ function HeaderComponent(props) {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
-
 
           <Nav defaultActiveKey={props.activeLink}
             className="me-auto mb-2 navLink"
@@ -101,9 +104,6 @@ function HeaderComponent(props) {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
-
-
 
   );
 }

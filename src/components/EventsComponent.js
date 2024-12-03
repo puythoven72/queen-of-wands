@@ -2,7 +2,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
+import axios from 'axios';
 //import currentEvent from "../assets/images/currentEvent.png";
+
 import { useEffect, useState } from "react";
 function EventsComponent() {
 
@@ -15,15 +17,18 @@ function EventsComponent() {
     }, [])
 
     function setImgSource() {
-        try {
-            // const src = require('../assets/images/currentEvent1.png');
-            setEventImgSrc(require('../assets/images/currentEvent.png'));
-
-        }
-        catch (err) {
-            setEventImgSrc(require('../assets/images/stayTuned.png'));
-            setMessageDisplay("MORE EVENTS COMING SOON");
-        }
+        const eventImage = '/assets/currentEvent.png';
+       
+            axios
+            .get(eventImage)
+            .then(() => {
+                setEventImgSrc(eventImage);
+            })
+            .catch(() => {
+              
+                 setEventImgSrc(require('../assets/images/stayTuned.png'));
+               
+            });
 
     }
 

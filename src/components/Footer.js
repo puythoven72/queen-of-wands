@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import email from '../assets/images/email.png'
+import insta from '../assets/images/instagram.png'
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 
@@ -27,27 +28,29 @@ function Footer(props) {
                 <Row className='d-flex align-bottom  text-center queenFont'>
 
                     <Col>
-
-                        <Mailto email="QueenofwandsTa@gmail.com" subject="Subject" body={""} >
-                            <Image src={email}></Image>
-                            <span className="align-bottom px-1"> EMAIL ME! </span>
-                        </Mailto>
-
+                        <Link to="https://www.instagram.com/queen_of_wands_tarot_advising?igsh=MWlsMTNjNnh2Mzg1OQ==" target="_blank">
+                            <img
+                                src={insta}
+                                alt="Instagram Link"
+                            />
+                            <span className="align-bottom px-1"> CHECK ME OUT ON INSTAGRAM</span>
+                        </Link>
                     </Col>
+
                 </Row>
+
                 <Row className='d-flex align-bottom  text-center'>
                     <Col >
-                        <small><small><a href='https://dryicons.com/free-icons/email'> Icon by Dryicons </a></small></small>
+                        {/* <small><small><a href='https://dryicons.com/free-icons/email'> Icon by Dryicons </a></small></small> */}
+                        <small>  <Link to="/TermsOfService" onClick={event => updateNav(event, "/TermsOfService")}>Terms of Services</Link></small>
                     </Col>
                 </Row>
 
                 <Row className='p-2'>
                     <Col className='d-flex align-items-center justify-content-center text-center'>
                         <small> <small> {`Copyright © Queen Of Wands Tarot Advising, LTD  ${year}`} </small></small>
-                        <small>&nbsp; | &nbsp;</small>
-                        <small>  <Link to="/TermsOfService"  onClick={event => updateNav(event, "/TermsOfService")}>Terms of Services</Link></small>
                     </Col>
-                  
+
                 </Row>
 
             </Container>

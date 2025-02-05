@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import {  Button } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,61 +8,29 @@ import Form from 'react-bootstrap/Form';
 import emailjs from 'emailjs-com';
 import "../App.css";
 import Alert from 'react-bootstrap/Alert';
-import { useLocation } from 'react-router-dom';
 
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
-
-
-function ContactComponent(props) {
-    const location = useLocation();
-
-
+function ContactComponent() {
 
     const [value, setValue] = useState("");
     //used for messages
     const [submitStatus, setSubmitStatus] = useState(null);
     const [messageDisplay, setMessageDisplay] = useState("");
     const [alertVariant, setAlertVariant] = useState("");
-    const [contactTitle, setContactTitle] = useState("CONTACT QUEEN OF WANDS");
-    const [isRSVP, setIsRSVP] = useState(false);
-    const [rsvpMessage, setRsvpMessage] = useState("");
 
     const [validated, setValidated] = useState(false);
     const successMessage = "Success - Your Message Has Been Successfully Submitted";
     const errorPhone = "Error - Invalid Phone Number";
     const errorMessage = "Error - Your Form Has Not Been Submitted. Something Went Wrong!";
 
+
     useEffect(() => {
-        setIsRSVP(false);
-
-        if (props.navigation === "topNav") {
-            setContactTitle("CONTACT QUEEN OF WANDS");
-            document.getElementById("message").value = null;
-            setIsRSVP(false);
-        } else {
-            let rsvpdata = location.state?.data;
-            checkRSVP(rsvpdata);
-        }
-
         displayMessage()
-
-
-    }, [submitStatus, props.navigation]);
-
-    const checkRSVP = (rsvpdata) => {
-        if (rsvpdata != null && rsvpdata != "undefined") {
-            let rsvp = JSON.parse(rsvpdata);
-            setContactTitle("RSVP For " + rsvp.location + " ON " + rsvp.date);
-            setRsvpMessage("I will be attending your event at " + rsvp.location + " on " + rsvp.date + ".");
-            document.getElementById("message").value = "I will be attending your event at " + rsvp.location + " on " + rsvp.date + ".";
-            setIsRSVP(true);
-        }
-    }
-
+    }, [submitStatus]);
 
 
     const displayMessage = () => {
@@ -94,7 +62,7 @@ function ContactComponent(props) {
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
             .then((result) => {
-                //  console.log(result.text);
+                console.log(result.text);
                 setSubmitStatus("success")
             }, (error) => {
                 console.log(error.text);
@@ -107,28 +75,14 @@ function ContactComponent(props) {
 
 
 
-    const validateRSVP = (event) => {
-
+    const validateInput = (event) => {
         const form = event.currentTarget;
 
-        //Check required fields
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-            setValidated(true);
-        } else {
-            handleOnSubmit(event);
-        }
-    }
-
-    const validateContact = (event) => {
-        const form = event.currentTarget;
-        // Check Phone Is valid, or empty
+        //Check Phone Is valid, or empty
         const validPhone = validatePhone(form.phone.value);
         if (!validPhone) {
             setSubmitStatus("errorPhone");
         }
-
         //Check required fields
         if (form.checkValidity() === false || !validPhone) {
             event.preventDefault();
@@ -137,18 +91,7 @@ function ContactComponent(props) {
         } else {
             handleOnSubmit(event);
         }
-    }
-
-
-    const validateInput = (event) => {
-
-        if (isRSVP) {
-            validateRSVP(event);
-        } else {
-            validateContact(event);
-        }
     };
-
 
     const validatePhone = (phone) => {
 
@@ -162,10 +105,12 @@ function ContactComponent(props) {
     return (
         <>
             <Container>
+
+
                 <Row className="mt-2  d-flex align-items-center justify-content-center text-center">
                     <Col className="">
                         <h1 className="splashTitle ">
-                            {contactTitle}
+                            CONTACT QUEEN OF WANDS
                         </h1>
                     </Col>
                 </Row>
@@ -219,54 +164,40 @@ function ContactComponent(props) {
                             </small>
 
                         </Form.Group>
-                        {
-                            !isRSVP ?
 
-                                (<Form.Group className="m-3" controlId="phone">
-                                    <Form.Label>
-                                        Phone Number
-                                    </Form.Label>
-                                    <Row>
-                                        <Input
-                                            className='rounded'
-                                            placeholder="Enter Phone Number (Optional)"
-                                            value={value}
-                                            onChange={setValue}
-                                            name='phone'
-                                            country="US"
-                                            maxLength="14"
-                                            minLength="14"
-                                        />
+                        <Form.Group className="m-3" controlId="phone">
+                            <Form.Label>
+                                Phone Number
+                            </Form.Label>
+                            <Row>
+                                <Input
+                                    className='rounded'
+                                    placeholder="Enter Phone Number (Optional)"
+                                    value={value}
+                                    onChange={setValue}
+                                    name='phone'
+                                    country="US"
+                                    maxLength="14"
+                                    minLength="14"
+                                />
 
-                                    </Row>
+                            </Row>
 
-                                </Form.Group>
-                                ) : (null)
-                        }
+                        </Form.Group>
 
                         <Form.Group className="m-3" controlId="message">
-                        {
-                            !isRSVP ?(
+                            
                             <Form.Label><span style={{ color: "red" }}>*</span>Message (500 Characters) Please include details about services you are interested in.</Form.Label>
-                           
-                        ) : (null)
-                    }
                             <Form.Control as="textarea" rows={3}
-                                required={isRSVP ? false : true}
+                                required
                                 name='message'
-                                readOnly={isRSVP ? true : false}
                                 maxLength="500"
                                 placeholder="Enter Message"
-
                             />
                             <Form.Control.Feedback type="invalid">
                                 Please Enter Your Message.
                             </Form.Control.Feedback>
                         </Form.Group>
-
-
-
-
 
                         <Row >
                             <Col    >

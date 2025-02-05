@@ -117,4 +117,14 @@
   box-shadow: 1px 1px 10px 0px #d5c28f;
 }
 
+.eventCard{
+  height: 100%;
+}
+
+.eventInfo{
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

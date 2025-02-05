@@ -8,6 +8,7 @@ import ContactComponent from './components/ContactComponent';
 import EventsComponent from './components/EventsComponent';
 import HomeComponent from './components/HomeComponent';
 import TermsOfService from './components/TermsOfService';
+import EventComponent from './components/EventComponent';
 import Footer from './components/Footer';
 function App() {
   const [activeLink, setActiveLink] = React.useState("/home");
@@ -25,8 +26,10 @@ function App() {
             <Route path="/home" element={<HomeComponent activeLink={activeLink} setActiveLink={setActiveLink}/>} />
             <Route path="/services" element={<ServicesComponent activeLink={activeLink} setActiveLink={setActiveLink} />} />
             <Route path="/about" element={<AboutComponent />} />
-            <Route path="/contact" element={<ContactComponent />} />
+            <Route path="/contact" element={<ContactComponent navigation = "topNav"/>} />
+            <Route path="/rsvp" element={<ContactComponent />} />
             <Route path="/events" element={<EventsComponent />} />
+            <Route path="/event" element={<EventComponent />} />
             <Route path="/TermsOfService" element={<TermsOfService/>} />
           </Routes>
         </div>

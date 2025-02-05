@@ -40,7 +40,7 @@ function HeaderComponent(props) {
     <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#c8b568" }}>
       <Container fluid style={{ backgroundColor: "#3A415C" }} >
 
-        <Navbar.Brand href="/home" >
+        <Navbar.Brand href="/Event" >
 
           <div className="navBarBrand ">
             <Image src={logo} />

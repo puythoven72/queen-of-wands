@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import Events from './utility/Events';
 import Card from 'react-bootstrap/Card';
 
 import CardGroup from 'react-bootstrap/CardGroup';
@@ -16,13 +15,23 @@ function EventsComponent() {
 
     const [messageDisplay, setMessageDisplay] = useState(null);
     const [eventImgSrc, setEventImgSrc] = useState("");
-    const allEvents = Events.currentEvents;
+    const [allEvents,setAllEvents] = useState([]);
+  
     const navigate = useNavigate();
 
     useEffect(() => {
         //   setImgSource()
+        getAllEvents();
+    }, []);
 
-    }, [])
+
+    const getAllEvents = () => {
+        axios.get("/assets/json/events.json").then((res) => {
+
+            setAllEvents(res.data.events);
+        })
+    };
+
 
     function setImgSource() {
         const eventImage = '/assets/currentEvent.png';
@@ -84,6 +93,7 @@ function EventsComponent() {
 
                 </CardGroup>
             </Row>
+
         </Container>
     )
 

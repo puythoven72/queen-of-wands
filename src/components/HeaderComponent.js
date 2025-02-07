@@ -22,8 +22,9 @@ function HeaderComponent(props) {
     document.getElementById("/about").classList.remove('active');
     document.getElementById("/contact").classList.remove('active');
     document.getElementById("/events").classList.remove('active');
+   
 
-    if (props.activeLink !== "/TermsOfService") {
+    if (props.activeLink !== "/TermsOfService" ) {
       //navigate to the selected link
       navigate(props.activeLink);
 
@@ -40,7 +41,7 @@ function HeaderComponent(props) {
     <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#c8b568" }}>
       <Container fluid style={{ backgroundColor: "#3A415C" }} >
 
-        <Navbar.Brand href="/Event" >
+        <Navbar.Brand href="/home" >
 
           <div className="navBarBrand ">
             <Image src={logo} />

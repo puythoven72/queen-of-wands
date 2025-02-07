@@ -250,19 +250,6 @@ a.splashFont:hover {
 }
 
 
-/* @media (min-width: 1024px) and (min-height: 600px){ 
-  .splashTextLoc{
-    padding-bottom:  90px;
-  
-}
-}
-
-@media (min-width: 1080px) and (min-height: 800px){ 
-  .splashTextLoc{
-    padding-bottom:  30px;
-  
-}
-} */
 
 @media (max-width: 961px) {    
  

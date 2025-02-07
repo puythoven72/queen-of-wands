@@ -37,12 +37,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
-  
     color: #c8b568; 
-    
     width: 350px;
     height: 550px;
- 
     background-image:  linear-gradient(to bottom, rgba(58, 65, 92, 1) 0%, rgba(58, 65, 92, 1) 100%), linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
     background-clip: content-box, padding-box; 
     padding: 10px;
@@ -57,6 +54,9 @@
    
     
   }
+
+ 
+
 
 .cardHeader{
   background-color: rgba(58,65,92, 0.7);
@@ -74,7 +74,11 @@
   .card-text { 
 
     height: 330px;
-    overflow-y: auto; 
+    /* overflow-y: auto;  */
+
+    overflow-y: auto; /* Enables horizontal scrolling */
+    overflow-x: hidden; /* Disables vertical scrolling */
+
     background-image: url(../assets/images/waterMark.png);
     background-position:center;
     background-repeat: no-repeat;
@@ -92,14 +96,15 @@
   text-shadow: 0 0 3px #000, 0 0 7px #000;  
 }
 
-   .car-card img {
+
+.car-card img {
     max-width: 100%;
     max-height: 100%;
-  } 
+} 
+
 .borderTest{
   border: white, solid;
 }
-
 
 
 .textBackround{
@@ -110,7 +115,6 @@
 .aboutImage {
   border-radius: 10px;
   margin-top: 1rem;
-
   background-color: #f5f5f5;
   border: 1px solid #000;
   /* Box Shadow */
@@ -119,6 +123,15 @@
 
 .eventCard{
   height: 100%;
+}
+
+.eventCard:hover{
+  border: solid #262b3d 3px;
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000, 0 0 7px #000000;  
+ 
+  
 }
 
 .eventInfo{

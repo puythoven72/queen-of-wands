@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
-
 import CardGroup from 'react-bootstrap/CardGroup';
 import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
@@ -15,8 +14,8 @@ function EventsComponent() {
 
     const [messageDisplay, setMessageDisplay] = useState(null);
     const [eventImgSrc, setEventImgSrc] = useState("");
-    const [allEvents,setAllEvents] = useState([]);
-  
+    const [allEvents, setAllEvents] = useState([]);
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,7 +26,6 @@ function EventsComponent() {
 
     const getAllEvents = () => {
         axios.get("/assets/json/events.json").then((res) => {
-
             setAllEvents(res.data.events);
         })
     };
@@ -35,19 +33,14 @@ function EventsComponent() {
 
     function setImgSource() {
         const eventImage = '/assets/currentEvent.png';
-        // let events = Events.currentEvents;
-
         axios
             .get(eventImage)
             .then(() => {
                 setEventImgSrc(eventImage);
             })
             .catch(() => {
-
                 setEventImgSrc(require('../assets/images/stayTuned.png'));
-
             });
-
     }
 
 
@@ -58,7 +51,6 @@ function EventsComponent() {
 
     return (
         <Container className="p-3">
-
             <Row className="mt-2">
                 <Col className="">
                     <h1 className="splashTitle  d-flex align-items-center justify-content-center text-center">
@@ -71,11 +63,11 @@ function EventsComponent() {
                 <CardGroup>
                     {allEvents.map((ev, index) => (
 
-                        <Card className='m-2' style={{ backgroundColor: "#3a415c", color: "#c8b568", borderRadius: '15px' }}>
+                        <Card key={index} className='m-2' style={{ backgroundColor: "#3a415c", color: "#c8b568", borderRadius: '15px' }}>
 
                             <Card.Title className="queenFont" >{ev.location} - {ev.date}</Card.Title >
 
-                            <Link className="eventCard" to="/event" state={{ data: JSON.stringify(ev) }} >
+                            <Link className="eventCard" to="/displayEvent" state={{ data: JSON.stringify(ev) }} >
                                 <Card.Img className="eventCard" variant="top" src={process.env.PUBLIC_URL + 'assets/images/' + ev.image} alt="me" />
                             </Link>
                             {/* <Card.Footer className="queenFont" style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>QUEEN OF WANDS TAROT ADVISING</Card.Footer> */}

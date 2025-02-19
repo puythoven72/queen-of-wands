@@ -121,9 +121,19 @@
   box-shadow: 1px 1px 10px 0px #d5c28f;
 }
 
-.eventCard{
-  height: 100%;
+.eventCardImg{
+  /* height: 100%; */
+
+  /* width: 560px; */
+
 }
+
+.eventCard{
+  width: 60px;
+  
+
+}
+
 
 .eventCard:hover{
   border: solid #262b3d 3px;

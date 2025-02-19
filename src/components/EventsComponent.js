@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 //import currentEvent from "asset";
@@ -47,8 +46,6 @@ function EventsComponent() {
     function sendRsvp(data) {
         navigate('/rsvp', { state: { data: data } });
     }
-
-
     return (
         <Container className="p-3">
             <Row className="mt-2">
@@ -59,35 +56,32 @@ function EventsComponent() {
                 </Col>
             </Row>
 
-            <Row className='text-center ' >
-                <CardGroup>
-                    {allEvents.map((ev, index) => (
+            <Row className='d-flex align-items-center justify-content-center text-center'>
 
-                        <Card key={index} className='m-2' style={{ backgroundColor: "#3a415c", color: "#c8b568", borderRadius: '15px' }}>
+                {allEvents.map((ev, index) => (
 
-                            <Card.Title className="queenFont" >{ev.location} - {ev.date}</Card.Title >
+                    <Card key={index} className='m-2' style={{ width: '35rem', backgroundColor: "#3a415c", color: "#c8b568", borderRadius: '15px' }}>
+                        <Card.Title className="queenFont" >{ev.location} - {ev.date}</Card.Title >
 
-                            <Link className="eventCard" to="/displayEvent" state={{ data: JSON.stringify(ev) }} >
-                                <Card.Img className="eventCard" variant="top" src={process.env.PUBLIC_URL + 'assets/images/' + ev.image} alt="me" />
-                            </Link>
-                            {/* <Card.Footer className="queenFont" style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>QUEEN OF WANDS TAROT ADVISING</Card.Footer> */}
-                            <Card.Footer style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>
-                                <Row>
-                                    <Button onClick={event => sendRsvp(JSON.stringify(ev))} variant="" type="submit" className="btn-custom " size="lg" >
-                                        RSVP
-                                    </Button>
-                                </Row>
-                            </Card.Footer>
+                        <Link className="" to="/displayEvent" state={{ data: JSON.stringify(ev) }} >
+                            <Card.Img className="  " variant="" src={process.env.PUBLIC_URL + 'assets/images/' + ev.image} alt={ev.description} />
+                        </Link>
+                        <Card.Footer style={{ backgroundColor: "#3a415c", color: "#c8b568" }}>
+                            <Row>
+                                <Button onClick={event => sendRsvp(JSON.stringify(ev))} variant="" type="submit" className="btn-custom " size="lg" >
+                                    RSVP
+                                </Button>
+                            </Row>
+                        </Card.Footer>
+                    </Card>
 
-                        </Card>
+                ))}
 
-                    ))}
 
-                </CardGroup>
             </Row>
 
         </Container>
     )
 
-};
+}
 export default EventsComponent;

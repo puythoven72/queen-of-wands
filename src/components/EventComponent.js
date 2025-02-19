@@ -16,7 +16,6 @@ function EventComponent() {
     const navigate = useNavigate();
 
     function sendRsvp(data) {
-        // console.log(data);
         navigate('/rsvp', { state: { data: data } });
     }
 
@@ -70,7 +69,7 @@ function EventComponent() {
                                         <strong>Time:</strong>
                                     </Col>
                                     <Col>
-                                        {data.time}
+                                        {data.starttime} - {data.endtime}
                                     </Col>
                                 </Row>
 

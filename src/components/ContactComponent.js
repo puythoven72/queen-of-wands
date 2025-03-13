@@ -82,16 +82,17 @@ function ContactComponent(props) {
             //This will set the RSVP Start Time
             let startHr = CalandarUtility.getHour(rsvp.starttime);
             let startMin = CalandarUtility.getMin(rsvp.starttime);
+           
             setRsvpStartHour(parseInt(startHr));
             setRsvpStartMin(parseInt(startMin));
             setStartDate(new Date(eventYear, eventMonth, eventDay, startHr, startMin)); // Year, Month (0-indexed), Day, Hours, Minutes
-
+      
             //This will set the RVSP End Time
             let endHr = CalandarUtility.getHour(rsvp.endtime);
             let endMin = CalandarUtility.getMin(rsvp.endtime);
             setRsvpEndHour(parseInt(endHr));
             setRsvpEndMin(parseInt(endMin));
-
+        
             setIsRSVP(true);
         }
     }
@@ -127,7 +128,7 @@ function ContactComponent(props) {
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
             .then((result) => {
-                //  console.log(result.text);
+              
                 setSubmitStatus("success")
             }, (error) => {
                 console.log(error.text);

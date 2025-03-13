@@ -10,19 +10,24 @@ class CalandarUtility {
             let timeSplit = timeVal.split(':');
             let militaryHour = parseInt(timeSplit[0]);
             if (timeVal.toLowerCase().includes('p')) {
-                militaryHour = parseInt(timeSplit[0]) + 12;
+                if (parseInt(militaryHour) !== 12) {
+                    militaryHour = parseInt(timeSplit[0]) + 12;
+                }
+            } else {
+                if (parseInt(militaryHour) === 12) {
+                    militaryHour = 0;
+                }
             }
+
             let min = timeSplit[1].replace(/\D/g, "");
             return militaryHour + ":" + min;
         }
     }
-
+    //this could be a problem  for 12am, come back to this
     convertHourFromMilitary(hr) {
-        let retHr =parseInt(hr);
-        let nHR =parseInt(hr)
-        console.log(hr +"???");
+        let retHr = parseInt(hr);
+        let nHR = parseInt(hr)
         if (nHR > 12) {
-            console.log("TRUE");
             retHr = nHR - 12;
         }
         return retHr;
@@ -53,7 +58,6 @@ class CalandarUtility {
             let dateSplit = date.split("/");
             year = dateSplit[2];
         }
-        console.log(year + " year ");
         return year;
     }
 
@@ -63,7 +67,6 @@ class CalandarUtility {
             let dateSplit = date.split("/");
             month = dateSplit[0];
         }
-        console.log(month + " month ");
         return month;
     }
 
@@ -73,7 +76,6 @@ class CalandarUtility {
             let dateSplit = date.split("/");
             day = dateSplit[1];
         }
-        console.log(day + " day ");
         return day;
     }
 
